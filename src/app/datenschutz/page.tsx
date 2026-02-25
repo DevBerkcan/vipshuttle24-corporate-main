@@ -63,10 +63,10 @@ export default function Datenschutz() {
             </p>
             <h3 className="text-silver/90 font-semibold mb-2">Cloudflare</h3>
             <p className="text-silver/70 leading-relaxed text-sm">
-              Wir nutzen den Service „Cloudflare" der Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107,
+              Wir nutzen den Service „Cloudflare” der Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107,
               USA. Cloudflare bietet ein weltweit verteiltes Content Delivery Network. Der Einsatz erfolgt auf
               Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem
-              „EU-US Data Privacy Framework" (DPF).
+              „EU-US Data Privacy Framework” (DPF).
             </p>
           </section>
 
@@ -89,7 +89,7 @@ export default function Datenschutz() {
             <h2 className="text-xl font-display font-semibold text-silver mb-4">4. Datenerfassung auf dieser Website</h2>
             <h3 className="text-silver/90 font-semibold mb-2">Cookies</h3>
             <p className="text-silver/70 leading-relaxed text-sm mb-4">
-              Unsere Internetseiten verwenden sogenannte „Cookies". Cookies sind kleine Datenpakete, die auf Ihrem
+              Unsere Internetseiten verwenden sogenannte „Cookies”. Cookies sind kleine Datenpakete, die auf Ihrem
               Endgerät gespeichert werden. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von
               Cookies informiert werden.
             </p>
@@ -104,7 +104,7 @@ export default function Datenschutz() {
               Für die Kommunikation nutzen wir WhatsApp Business der WhatsApp Ireland Limited, 4 Grand Canal Square,
               Dublin 2, Irland. Die Kommunikation erfolgt über Ende-zu-Ende-Verschlüsselung. Rechtsgrundlage:
               Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data
-              Privacy Framework".
+              Privacy Framework”.
             </p>
           </section>
 
@@ -113,7 +113,7 @@ export default function Datenschutz() {
             <h2 className="text-xl font-display font-semibold text-silver mb-4">5. Soziale Medien</h2>
             <p className="text-silver/70 leading-relaxed text-sm">
               Auf dieser Website sind Elemente von sozialen Medien (Facebook, Instagram) eingebunden. Diese werden
-              nur zusammen mit der „Shariff"-Lösung eingesetzt, die verhindert, dass beim Seitenaufruf bereits
+              nur zusammen mit der „Shariff”-Lösung eingesetzt, die verhindert, dass beim Seitenaufruf bereits
               Daten übertragen werden. Erst bei aktivem Klick auf das Social-Media-Element wird eine Verbindung
               hergestellt (Art. 6 Abs. 1 lit. a DSGVO).
             </p>
@@ -156,7 +156,7 @@ export default function Datenschutz() {
             <h2 className="text-xl font-display font-semibold text-silver mb-4">8. SSL-Verschlüsselung</h2>
             <p className="text-silver/70 leading-relaxed text-sm">
               Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte
-              Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt.
+              Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://” auf „https://” wechselt.
             </p>
           </section>
 
