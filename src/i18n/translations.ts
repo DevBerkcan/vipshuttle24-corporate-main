@@ -414,4 +414,13 @@ export const translations = {
   },
 } as const;
 
-export type Translations = typeof translations.de;
+type DeepWiden<T> =
+  T extends string ? string :
+  T extends number ? number :
+  T extends boolean ? boolean :
+  T extends (...args: infer A) => infer R ? (...args: A) => R :
+  T extends readonly (infer U)[] ? ReadonlyArray<DeepWiden<U>> :
+  T extends object ? { [K in keyof T]: DeepWiden<T[K]> } :
+  T;
+
+export type Translations = DeepWiden<typeof translations.de>;
