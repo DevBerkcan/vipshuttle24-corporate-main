@@ -7,6 +7,7 @@ const Footer = () => {
   const { t } = useLang();
   const f = t.footer;
   const currentYear = new Date().getFullYear();
+  const { lang } = useLang();
 
   return (
     <>
@@ -92,9 +93,9 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-silver/50 text-xs sm:text-sm text-center sm:text-left">{f.copyright(currentYear)}</p>
               <nav aria-label="Rechtliches" className="flex space-x-5 text-sm">
-                <a href="/impressum" className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.impressum}</a>
-                <a href="/datenschutz" className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.datenschutz}</a>
-                <a href="/agb" className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.agb}</a>
+                <a href={`/impressum?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.impressum}</a>
+                <a href={`/datenschutz?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.datenschutz}</a>
+                <a href={`/agb?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.agb}</a>
               </nav>
             </div>
           </div>

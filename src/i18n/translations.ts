@@ -2,7 +2,6 @@ export type Lang = 'de' | 'en';
 
 export const translations = {
   de: {
-    // ── Header ──────────────────────────────────────────────────────────────
     nav: {
       services: 'Services',
       fleet: 'Fahrzeugflotte',
@@ -16,8 +15,6 @@ export const translations = {
       whatsapp: 'WhatsApp Chat',
       home: 'VIPSHUTTLE24 – Startseite',
     },
-
-    // ── Hero ────────────────────────────────────────────────────────────────
     hero: {
       badge: 'Premium Chauffeur Service Düsseldorf',
       headline1: 'Ihre Reise beginnt',
@@ -29,19 +26,17 @@ export const translations = {
       cta2Label: 'Unsere Chauffeur-Services entdecken',
       stat1Value: '24/7',
       stat1Label: 'Verfügbar',
-      stat2Value: '10+',
+      stat2Value: '20+',
       stat2Label: 'Jahre Erfahrung',
       stat3Value: '100%',
       stat3Label: 'Diskretion',
       statsAriaLabel: 'Unsere Versprechen',
     },
-
-    // ── Services ─────────────────────────────────────────────────────────────
     services: {
       sectionLabel: 'Unsere Services',
       badge: 'Unsere Services',
       headline: 'Exzellenz in jedem Detail',
-      subline: 'Von Flughafentransfers bis zu maßgeschneiderten Roadshows – erstklassige Mobilität für jeden Anlass.',
+      subline: 'Von Flughafentransfers bis zu maßgeschneiderten Gruppenreisen – erstklassige Mobilität für jeden Anlass.',
       cta: 'Jetzt anfragen',
       bottomText: 'Benötigen Sie einen individuellen Service?',
       bottomCta: 'Persönliche Beratung anfragen',
@@ -64,34 +59,64 @@ export const translations = {
           description: 'Professionelle Organisation Ihrer Geschäftsreisen und Roadshows durch ganz NRW. Perfekte Koordination, pünktliche Transfers und diskrete Begleitung.',
           features: ['Mehrtägige Touren', 'Mehrere Fahrzeuge', 'Persönlicher Koordinator', 'Flexible Routenplanung'],
         },
+        {
+          title: 'Gruppen & Bus Transfer',
+          subtitle: 'Für große Gruppen und Events',
+          description: 'Komfortabler Gruppentransfer mit Mercedes-Benz Sprinter oder Tourismo-Reisebus für bis zu 50 Personen. Ideal für Firmenevents, Messefahrten und Gruppenreisen in ganz NRW.',
+          features: ['Bis zu 50 Personen', 'Mercedes Sprinter & Tourismo', 'Mehrtägige Touren möglich', 'Messe- & Eventshuttle'],
+        },
       ],
     },
-
-    // ── Fleet ────────────────────────────────────────────────────────────────
     fleet: {
       sectionLabel: 'Fahrzeugflotte',
       badge: 'Fahrzeugflotte',
       headline: 'Exklusive Mercedes-Flotte für jeden Anlass',
-      subline: 'Ausschließlich gepflegte Mercedes-Fahrzeuge, nicht älter als 3 Jahre – für höchste Ansprüche an Komfort und Stil.',
+      subline: 'Ausschließlich gepflegte Mercedes-Fahrzeuge – Limousinen, Vans und Reisebusse für höchste Ansprüche an Komfort und Stil.',
       viewLabel: 'ansehen',
       closeLabel: 'Schließen',
       prevLabel: 'Vorheriges Fahrzeug',
       nextLabel: 'Nächstes Fahrzeug',
       stat1Value: '100% Mercedes',
       stat1Label: 'Exklusive Premiummarke',
-      stat2Value: '< 3 Jahre',
-      stat2Label: 'Neueste Modelle',
+      stat2Value: '6 Fahrzeuge',
+      stat2Label: 'Große Premiumflotte',
       stat3Value: '100%',
       stat3Label: 'Regelmäßig gewartet',
+      // DE
       vehicles: [
-        { name: 'Mercedes-Benz S-Klasse', category: 'Luxus-Limousine', description: 'Unsere Flaggschiff-Limousine für höchste Ansprüche. Maximaler Komfort, modernste Technologie und überlegene Eleganz.' },
-        { name: 'Mercedes-Benz E-Klasse', category: 'Business-Limousine', description: 'Eleganz und Komfort vereint. Ideal für Geschäftsreisen und repräsentative Anlässe.' },
-        { name: 'Mercedes-Benz V-Klasse', category: 'VIP-Van', description: 'Großzügiger Raum für bis zu 7 Personen ohne Abstriche beim Komfort.' },
-        { name: 'Mercedes-Benz V-Klasse', category: 'VIP-Van', description: 'Weitere V-Klasse für Gruppen und besondere Anlässe. Gleicher Premium-Komfort, maximale Flexibilität.' },
+        {
+          name: 'Mercedes-Benz S-Klasse',
+          category: 'Luxus-Limousine',
+          description: 'Unsere Flaggschiff-Limousine für höchste Ansprüche. Maximaler Komfort, modernste Technologie und überlegene Eleganz.',
+        },
+        {
+          name: 'Mercedes-Benz E-Klasse',
+          category: 'Business-Limousine',
+          description: 'Eleganz und Komfort vereint. Ideal für Geschäftsreisen und repräsentative Anlässe.',
+        },
+        {
+          name: 'Mercedes-Benz V-Klasse',
+          category: 'VIP-Van',
+          description: 'Großzügiger Raum für bis zu 7 Personen ohne Abstriche beim Komfort.',
+        },
+        {
+          name: 'Mercedes-Benz Sprinter & V-Klasse',
+          category: 'Airport Flotte',
+          description: 'Sprinter und V-Klasse im Doppeleinsatz – perfekte Koordination für Gruppen-Transfers am Flughafen.',
+        },
+        {
+          name: 'Mercedes-Benz Tourismo',
+          category: 'Reisebus (schwarz)',
+          description: 'Unser schwarzer Tourismo für Gruppen bis zu 50 Personen. Klimatisiert, premium ausgestattet.',
+        },
+        {
+          name: 'Mercedes-Benz Tourismo',
+          category: 'Reisebus (blau-grau)',
+          description: 'Modernster Tourismo in eleganter Blau-Grau-Lackierung für unvergessliche Gruppenreisen.',
+        },
       ],
-    },
 
-    // ── Gallery ──────────────────────────────────────────────────────────────
+    },
     gallery: {
       sectionLabel: 'Bildergalerie VipShuttle24',
       badge: 'Galerie',
@@ -106,8 +131,6 @@ export const translations = {
       openLabel: 'Bild öffnen',
       counter: (cur: number, total: number) => `${cur} / ${total}`,
     },
-
-    // ── Booking ──────────────────────────────────────────────────────────────
     booking: {
       sectionLabel: 'Buchungsanfrage',
       badge: 'Buchungsanfrage',
@@ -133,7 +156,7 @@ export const translations = {
         items: [
           { title: 'Festpreisgarantie', text: 'Kein Taxameter – Sie kennen Ihren Preis vor der Fahrt.' },
           { title: 'Diskret & pünktlich', text: 'Absolute Verschwiegenheit und minutengenaue Zuverlässigkeit.' },
-          { title: 'Nur Premium-Fahrzeuge', text: 'Ausschließlich gepflegte Mercedes-Benz, nicht älter als 3 Jahre.' },
+          { title: 'Nur Premium-Fahrzeuge', text: 'Ausschließlich gepflegte Mercedes-Benz – vom Sedan bis zum Reisebus.' },
           { title: 'Kurzfristig buchbar', text: 'Schnelle Verfügbarkeit – rufen Sie uns direkt an.' },
         ],
       },
@@ -151,6 +174,7 @@ export const translations = {
           wedding: 'Hochzeitsfahrt',
           corporate: 'Corporate Roadshow',
           hourly: 'Stundenweise Buchung',
+          group: 'Gruppen & Bus Transfer',
           vip: 'VIP-Service',
           other: 'Sonstiges',
         },
@@ -173,8 +197,6 @@ export const translations = {
       emailBody: (d: Record<string, string>) =>
         `Sehr geehrtes VipShuttle24-Team,\n\nhiermit stelle ich eine unverbindliche Buchungsanfrage:\n\n──────────────────────────────\nPERSÖNLICHE DATEN\n──────────────────────────────\nName:         ${d.name}\nE-Mail:       ${d.email}\nTelefon:      ${d.phone}\n\n──────────────────────────────\nFAHRTDETAILS\n──────────────────────────────\nService:      ${d.service}\nDatum:        ${d.date}\nUhrzeit:      ${d.time}\nPersonen:     ${d.passengers}\nAbholort:     ${d.pickup}\nZielort:      ${d.destination}\n\n──────────────────────────────\nWEITERE INFORMATIONEN\n──────────────────────────────\n${d.message}\n──────────────────────────────\n\nBitte nehmen Sie schnellstmöglich Kontakt mit mir auf.\n\nMit freundlichen Grüßen,\n${d.name}`,
     },
-
-    // ── Footer ───────────────────────────────────────────────────────────────
     footer: {
       tagline: 'Ihr Premium Chauffeur-Service in Düsseldorf und NRW. Sicherheit, Komfort und Eleganz in jedem Detail.',
       navTitle: 'Navigation',
@@ -204,14 +226,108 @@ export const translations = {
         'Corporate Roadshows',
         'Stundenweise Buchung',
         'VIP-Service',
-        'Bus Transfer für Gruppen',
+        'Gruppen & Bus Transfer',
       ],
+    },
+    legal: {
+      back: '← Zurück zur Website',
+      impressum: {
+        pageTitle: 'Impressum | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Impressum',
+        s1Title: 'Angaben gemäß § 5 TMG',
+        s1Name: 'Ahmet Bostanci',
+        s1Company: 'Vipshuttle24',
+        s1Street: 'Schlesische Str. 104',
+        s1City: '40231 Düsseldorf',
+        s2Title: 'Kontakt',
+        s2Mobile: 'Mobil',
+        s2Phone: 'Telefon',
+        s2Email: 'E-Mail',
+        s3Title: 'Allgemeiner Disclaimer',
+        s3Text: 'Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen sowie die Richtigkeit der Eintragungen kann keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende Links erreicht werden. Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich. Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information.',
+        s4Title: 'Streitschlichtung',
+        s4Text: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:',
+        s4Suffix: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+      },
+      datenschutz: {
+        pageTitle: 'Datenschutzerklärung | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Datenschutzerklärung',
+        s1Title: '1. Datenschutz auf einen Blick',
+        s1h2: 'Allgemeine Hinweise',
+        s1p1: 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
+        s1h3: 'Datenerfassung auf dieser Website',
+        s1p2: 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. Kontaktformular). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (technische Daten wie Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).',
+        s1h4: 'Ihre Rechte',
+        s1p3: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.',
+        s2Title: '2. Hosting',
+        s2h2: 'RAIDBOXES',
+        s2p1: 'Wir hosten die Inhalte unserer Website bei RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. Wenn Sie unsere Website besuchen, erfasst RAIDBOXES verschiedene Logfiles inklusive Ihrer IP-Adressen. Die Verwendung von RAIDBOXES erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.',
+        s2h3: 'Cloudflare',
+        s2p2: 'Wir nutzen den Service von Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare bietet ein weltweit verteiltes Content Delivery Network. Der Einsatz erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework (DPF).',
+        s3Title: '3. Verantwortliche Stelle',
+        s3Name: 'Vipshuttle24',
+        s3Person: 'Ahmet Bostanci',
+        s3Street: 'Schlesische Str. 104',
+        s3City: '40231 Düsseldorf',
+        s3Phone: 'Telefon',
+        s3Mobile: 'Mobil',
+        s3Email: 'E-Mail',
+        s4Title: '4. Datenerfassung auf dieser Website',
+        s4h2: 'Cookies',
+        s4p1: 'Unsere Internetseiten verwenden sogenannte Cookies. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.',
+        s4h3: 'Kontaktformular & E-Mail',
+        s4p2: 'Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.',
+        s4h4: 'Kommunikation via WhatsApp',
+        s4p3: 'Für die Kommunikation nutzen wir WhatsApp Business der WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Die Kommunikation erfolgt über Ende-zu-Ende-Verschlüsselung. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework.',
+        s5Title: '5. Soziale Medien',
+        s5p1: 'Auf dieser Website sind Elemente von sozialen Medien (Facebook, Instagram) eingebunden. Diese werden nur zusammen mit der Shariff-Lösung eingesetzt, die verhindert, dass beim Seitenaufruf bereits Daten übertragen werden. Erst bei aktivem Klick auf das Social-Media-Element wird eine Verbindung hergestellt (Art. 6 Abs. 1 lit. a DSGVO).',
+        s6Title: '6. Analyse-Tools',
+        s6h2: 'WP Statistics',
+        s6p1: 'Diese Website nutzt WP Statistics (Veronalabs, Tallinn, Estland) zur anonymisierten Auswertung der Besucherzugriffe. Die erfassten Daten werden ausschließlich auf unserem eigenen Server gespeichert. IP-Adressen werden anonymisiert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s7Title: '7. Plugins und Tools',
+        s7h2: 'YouTube (erweiterter Datenschutz)',
+        s7p1: 'Diese Website bindet Videos von YouTube ein (Google Ireland Limited, Dublin 4, Irland). Wir nutzen den erweiterten Datenschutzmodus. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Google ist nach dem EU-US Data Privacy Framework zertifiziert.',
+        s7h3: 'Font Awesome',
+        s7p2: 'Diese Seite nutzt Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) zur Darstellung von Icons. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s7h4: 'OpenStreetMap',
+        s7p3: 'Wir binden OpenStreetMap auf unserem eigenen Server ein, sodass keine Verbindung zu Servern Dritter erfolgt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s8Title: '8. SSL-Verschlüsselung',
+        s8p1: 'Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von http:// auf https:// wechselt.',
+      },
+      agb: {
+        pageTitle: 'AGB | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Allgemeine Geschäftsbedingungen',
+        preise: { title: 'Preise', text: 'Alle Preise sind in Euro und inklusive der gesetzlichen Mehrwertsteuer in Höhe von 19 %.' },
+        zahlung: { title: 'Zahlung', text: 'Zahlung für Dienstleistungen ist per Banküberweisung im Voraus oder mit Kreditkarte möglich. Wir akzeptieren keine Barzahlungen.' },
+        leistung: { title: 'Leistungsumfang', text: 'Mietpreise beinhalten Fahrdienstleistungen, Treibstoffkosten und kostenloses Wasser im Fahrzeug. Park- und Mautgebühren werden extra berechnet.' },
+        mindest: { title: 'Mindestmietdauer', text: 'Die Mindestmietdauer für Stundenbuchungen beträgt drei Stunden.' },
+        wartezeit: { title: 'Wartezeit', text: '30 Minuten Wartezeit am Flughafen und 15 Minuten an anderen Abholorten sind im Preis enthalten. Weitere Wartezeit am Abholort wird im 30-Minuten-Takt berechnet.' },
+        fahrpreis: { title: 'Fahrpreis', text: 'Der Fahrpreis ändert sich nicht während der Fahrt aufgrund von verkehrsbedingten Änderungen der Fahrstrecke oder Wartezeiten.' },
+        rauchen: { title: 'Rauchverbot', text: 'Das Rauchen ist in jedem unserer Fahrzeuge verboten.' },
+        haftungKunde: { title: 'Haftung des Kunden', text: 'Die Kunden übernehmen die volle finanzielle Haftung für Schäden, die durch Sie oder Mitglieder ihrer Vertragspartei während der Miet-/Fahrzeit verursacht wurden.' },
+        haftungsausschluss: { title: 'Haftungsausschluss', text: 'Das Unternehmen ist nicht verantwortlich für Verzögerungen wegen Wetter, Verkehr oder unsicherer Straßenverhältnisse (Naturereignisse, Unfälle oder unvorhersehbare technische Pannen). In diesen Fällen darf vom Vertrag ohne Ersatzleistung zurückgetreten werden. Unsere Haftung ist grundsätzlich auf die gesetzlich vorgeschriebene Betriebshaftpflichtversicherung beschränkt.' },
+        storno: {
+          title: 'Stornierungsbedingungen',
+          row1label: 'Stornierung bis 7 Tage vor Abreise',
+          row1value: 'Kostenlos',
+          row2label: 'Stornierung bis 2 Tage vor Abreise',
+          row2value: '50 %',
+          row3label: 'Stornierung bis 24 Stunden vor Abreise',
+          row3value: '75 %',
+          row4label: 'Stornierung ab 24 Stunden vor Abreise',
+          row4value: '100 %',
+        },
+        gericht: { title: 'Gerichtsstand', text: 'Gerichtsstand ist ausschließlich Düsseldorf, soweit der Auftraggeber Kaufmann, juristische Person des öffentlichen Rechts oder ein öffentlich-rechtliches Sondervermögen ist. Dies gilt gleichermaßen, wenn der Auftraggeber keinen allgemeinen Gerichtsstand in Deutschland oder einem anderen Mitgliedsstaat der EU hat.' },
+      },
+      links: {
+        impressum: 'Impressum',
+        datenschutz: 'Datenschutz',
+        agb: 'AGB',
+        home: 'Startseite',
+      },
     },
   },
 
-  // ════════════════════════════════════════════════════════════════════════════
-  //  ENGLISH
-  // ════════════════════════════════════════════════════════════════════════════
   en: {
     nav: {
       services: 'Services',
@@ -226,7 +342,6 @@ export const translations = {
       whatsapp: 'WhatsApp Chat',
       home: 'VIPSHUTTLE24 – Home',
     },
-
     hero: {
       badge: 'Premium Chauffeur Service Düsseldorf',
       headline1: 'Your journey begins',
@@ -238,18 +353,17 @@ export const translations = {
       cta2Label: 'Explore our chauffeur services',
       stat1Value: '24/7',
       stat1Label: 'Available',
-      stat2Value: '10+',
+      stat2Value: '20+',
       stat2Label: 'Years experience',
       stat3Value: '100%',
       stat3Label: 'Discretion',
       statsAriaLabel: 'Our promises',
     },
-
     services: {
       sectionLabel: 'Our Services',
       badge: 'Our Services',
       headline: 'Excellence in every detail',
-      subline: 'From airport transfers to tailor-made roadshows – premium mobility for every occasion.',
+      subline: 'From airport transfers to tailor-made group journeys – premium mobility for every occasion.',
       cta: 'Request now',
       bottomText: 'Need a custom service?',
       bottomCta: 'Request personal consultation',
@@ -272,32 +386,64 @@ export const translations = {
           description: 'Professional organisation of your business trips and roadshows throughout NRW. Perfect coordination, punctual transfers and discreet accompaniment.',
           features: ['Multi-day tours', 'Multiple vehicles', 'Personal coordinator', 'Flexible route planning'],
         },
+        {
+          title: 'Group & Bus Transfer',
+          subtitle: 'For large groups and events',
+          description: 'Comfortable group transfers with Mercedes-Benz Sprinter or Tourismo coach for up to 50 passengers. Ideal for corporate events, trade fair shuttles and group travel throughout NRW.',
+          features: ['Up to 50 passengers', 'Mercedes Sprinter & Tourismo', 'Multi-day tours available', 'Trade fair & event shuttle'],
+        },
       ],
     },
-
     fleet: {
       sectionLabel: 'Vehicle Fleet',
       badge: 'Vehicle Fleet',
       headline: 'Exclusive Mercedes fleet for every occasion',
-      subline: 'Exclusively maintained Mercedes vehicles, no older than 3 years – for the highest demands on comfort and style.',
+      subline: 'Exclusively maintained Mercedes vehicles – sedans, vans and coaches for the highest demands on comfort and style.',
       viewLabel: 'view',
       closeLabel: 'Close',
       prevLabel: 'Previous vehicle',
       nextLabel: 'Next vehicle',
       stat1Value: '100% Mercedes',
       stat1Label: 'Exclusive premium brand',
-      stat2Value: '< 3 years',
-      stat2Label: 'Latest models',
+      stat2Value: '6 vehicles',
+      stat2Label: 'Large premium fleet',
       stat3Value: '100%',
       stat3Label: 'Regularly serviced',
+      // EN
       vehicles: [
-        { name: 'Mercedes-Benz S-Class', category: 'Luxury Sedan', description: 'Our flagship sedan for the highest demands. Maximum comfort, cutting-edge technology and superior elegance.' },
-        { name: 'Mercedes-Benz E-Class', category: 'Business Sedan', description: 'Elegance and comfort combined. Ideal for business trips and representative occasions.' },
-        { name: 'Mercedes-Benz V-Class', category: 'VIP Van', description: 'Generous space for up to 7 passengers without compromising on comfort.' },
-        { name: 'Mercedes-Benz V-Class', category: 'VIP Van', description: 'Second V-Class for groups and special occasions. Same premium comfort, maximum flexibility.' },
+        {
+          name: 'Mercedes-Benz S-Class',
+          category: 'Luxury Sedan',
+          description: 'Our flagship sedan for the highest demands. Maximum comfort, cutting-edge technology and superior elegance.',
+        },
+        {
+          name: 'Mercedes-Benz E-Class',
+          category: 'Business Sedan',
+          description: 'Elegance and comfort combined. Ideal for business trips and representative occasions.',
+        },
+        {
+          name: 'Mercedes-Benz V-Class',
+          category: 'VIP Van',
+          description: 'Generous space for up to 7 passengers without compromising on comfort.',
+        },
+        {
+          name: 'Mercedes-Benz Sprinter & V-Class',
+          category: 'Airport Fleet',
+          description: 'Sprinter and V-Class deployed together – perfect coordination for group transfers at the airport.',
+        },
+        {
+          name: 'Mercedes-Benz Tourismo',
+          category: 'Coach (black)',
+          description: 'Our black Tourismo coach for groups of up to 50 passengers. Air-conditioned, premium interior.',
+        },
+        {
+          name: 'Mercedes-Benz Tourismo',
+          category: 'Coach (blue-grey)',
+          description: 'Latest Tourismo in elegant blue-grey finish for unforgettable group journeys.',
+        },
       ],
-    },
 
+    },
     gallery: {
       sectionLabel: 'VipShuttle24 Photo Gallery',
       badge: 'Gallery',
@@ -312,7 +458,6 @@ export const translations = {
       openLabel: 'Open image',
       counter: (cur: number, total: number) => `${cur} / ${total}`,
     },
-
     booking: {
       sectionLabel: 'Booking Request',
       badge: 'Booking Request',
@@ -338,7 +483,7 @@ export const translations = {
         items: [
           { title: 'Fixed-price guarantee', text: 'No meter – you know your price before the ride.' },
           { title: 'Discreet & punctual', text: 'Absolute confidentiality and minute-precise reliability.' },
-          { title: 'Premium vehicles only', text: 'Exclusively maintained Mercedes-Benz, no older than 3 years.' },
+          { title: 'Premium vehicles only', text: 'Exclusively maintained Mercedes-Benz – from sedan to coach.' },
           { title: 'Short-notice booking', text: 'Quick availability – call us directly.' },
         ],
       },
@@ -356,6 +501,7 @@ export const translations = {
           wedding: 'Wedding Ride',
           corporate: 'Corporate Roadshow',
           hourly: 'Hourly Booking',
+          group: 'Group & Bus Transfer',
           vip: 'VIP Service',
           other: 'Other',
         },
@@ -378,7 +524,6 @@ export const translations = {
       emailBody: (d: Record<string, string>) =>
         `Dear VipShuttle24 Team,\n\nI would like to submit a non-binding booking request:\n\n──────────────────────────────\nPERSONAL DETAILS\n──────────────────────────────\nName:         ${d.name}\nEmail:        ${d.email}\nPhone:        ${d.phone}\n\n──────────────────────────────\nRIDE DETAILS\n──────────────────────────────\nService:      ${d.service}\nDate:         ${d.date}\nTime:         ${d.time}\nPassengers:   ${d.passengers}\nPick-up:      ${d.pickup}\nDestination:  ${d.destination}\n\n──────────────────────────────\nFURTHER INFORMATION\n──────────────────────────────\n${d.message}\n──────────────────────────────\n\nPlease contact me as soon as possible.\n\nKind regards,\n${d.name}`,
     },
-
     footer: {
       tagline: 'Your premium chauffeur service in Düsseldorf and NRW. Safety, comfort and elegance in every detail.',
       navTitle: 'Navigation',
@@ -408,19 +553,107 @@ export const translations = {
         'Corporate Roadshows',
         'Hourly Booking',
         'VIP Service',
-        'Group Bus Transfer',
+        'Group & Bus Transfer',
       ],
+    },
+    legal: {
+      back: '← Back to website',
+      impressum: {
+        pageTitle: 'Legal Notice | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Legal Notice',
+        s1Title: 'Information pursuant to § 5 TMG',
+        s1Name: 'Ahmet Bostanci',
+        s1Company: 'Vipshuttle24',
+        s1Street: 'Schlesische Str. 104',
+        s1City: '40231 Düsseldorf',
+        s2Title: 'Contact',
+        s2Mobile: 'Mobile',
+        s2Phone: 'Phone',
+        s2Email: 'Email',
+        s3Title: 'General Disclaimer',
+        s3Text: 'No liability is accepted for completeness, editorial or technical errors, omissions or the accuracy of entries. In particular, no guarantee can be given for the completeness and accuracy of information reached via external links. Providers are responsible for their own content under general law. References via hyperlinks to third-party website content serve purely for information purposes.',
+        s4Title: 'Dispute Resolution',
+        s4Text: 'The European Commission provides a platform for online dispute resolution (ODR):',
+        s4Suffix: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
+      },
+      datenschutz: {
+        pageTitle: 'Privacy Policy | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Privacy Policy',
+        s1Title: '1. Privacy at a Glance',
+        s1h2: 'General Information',
+        s1p1: 'The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.',
+        s1h3: 'Data Collection on this Website',
+        s1p2: 'Data processing on this website is carried out by the website operator. Your data is collected partly by you providing it to us (e.g. via a contact form). Other data is collected automatically when you visit the website by our IT systems (technical data such as internet browser, operating system or time of page access).',
+        s1h4: 'Your Rights',
+        s1p3: 'You have the right at any time to receive free information about the origin, recipient and purpose of your stored personal data, as well as the right to correction, blocking or deletion of this data. You also have the right to lodge a complaint with the competent supervisory authority.',
+        s2Title: '2. Hosting',
+        s2h2: 'RAIDBOXES',
+        s2p1: 'We host the content of our website with RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. When you visit our website, RAIDBOXES collects various log files including your IP addresses. RAIDBOXES is used on the basis of Art. 6(1)(f) GDPR.',
+        s2h3: 'Cloudflare',
+        s2p2: 'We use the service by Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare offers a globally distributed content delivery network. Use is based on Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework (DPF).',
+        s3Title: '3. Responsible Party',
+        s3Name: 'Vipshuttle24',
+        s3Person: 'Ahmet Bostanci',
+        s3Street: 'Schlesische Str. 104',
+        s3City: '40231 Düsseldorf',
+        s3Phone: 'Phone',
+        s3Mobile: 'Mobile',
+        s3Email: 'Email',
+        s4Title: '4. Data Collection on this Website',
+        s4h2: 'Cookies',
+        s4p1: 'Our website uses so-called cookies. Cookies are small data packages stored on your device. You can set your browser to inform you when cookies are being set.',
+        s4h3: 'Contact Form & Email',
+        s4p2: 'If you send us enquiries via contact form or email, your details including the contact information you provide will be stored by us for the purpose of processing the request. We do not share this data without your consent. Legal basis: Art. 6(1)(b) GDPR.',
+        s4h4: 'Communication via WhatsApp',
+        s4p3: 'For communication we use WhatsApp Business by WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland. Communication is end-to-end encrypted. Legal basis: Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework.',
+        s5Title: '5. Social Media',
+        s5p1: 'This website integrates social media elements (Facebook, Instagram). These are only used together with the Shariff solution, which prevents data from being transmitted when the page loads. A connection is only established when you actively click on the social media element (Art. 6(1)(a) GDPR).',
+        s6Title: '6. Analytics Tools',
+        s6h2: 'WP Statistics',
+        s6p1: 'This website uses WP Statistics (Veronalabs, Tallinn, Estonia) for anonymised analysis of visitor access. The collected data is stored exclusively on our own server. IP addresses are anonymised. Legal basis: Art. 6(1)(f) GDPR.',
+        s7Title: '7. Plugins and Tools',
+        s7h2: 'YouTube (Enhanced Privacy)',
+        s7p1: 'This website embeds videos from YouTube (Google Ireland Limited, Dublin 4, Ireland). We use enhanced privacy mode. Legal basis: Art. 6(1)(f) GDPR. Google is certified under the EU-US Data Privacy Framework.',
+        s7h3: 'Font Awesome',
+        s7p2: 'This site uses Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) to display icons. Legal basis: Art. 6(1)(f) GDPR.',
+        s7h4: 'OpenStreetMap',
+        s7p3: 'We embed OpenStreetMap on our own server, so no connection to third-party servers is established. Legal basis: Art. 6(1)(f) GDPR.',
+        s8Title: '8. SSL Encryption',
+        s8p1: 'For security reasons, this site uses SSL or TLS encryption. You can recognise an encrypted connection by the browser address bar changing from http:// to https://.',
+      },
+      agb: {
+        pageTitle: 'T&Cs | VIPSHUTTLE24 Düsseldorf',
+        h1: 'Terms & Conditions',
+        preise: { title: 'Prices', text: 'All prices are in euros and include statutory VAT of 19%.' },
+        zahlung: { title: 'Payment', text: 'Payment for services is possible by bank transfer in advance or by credit card. We do not accept cash payments.' },
+        leistung: { title: 'Scope of Services', text: 'Rental prices include driving services, fuel costs and complimentary water in the vehicle. Parking and toll fees are charged separately.' },
+        mindest: { title: 'Minimum Hire Duration', text: 'The minimum hire duration for hourly bookings is three hours.' },
+        wartezeit: { title: 'Waiting Time', text: '30 minutes waiting time at the airport and 15 minutes at other pick-up locations are included in the price. Additional waiting time at the pick-up location is charged in 30-minute increments.' },
+        fahrpreis: { title: 'Fare', text: 'The fare does not change during the journey due to traffic-related changes in the route or waiting times.' },
+        rauchen: { title: 'No Smoking', text: 'Smoking is prohibited in all of our vehicles.' },
+        haftungKunde: { title: 'Customer Liability', text: 'Customers assume full financial liability for damage caused by themselves or members of their party during the hire/journey period.' },
+        haftungsausschluss: { title: 'Disclaimer of Liability', text: 'The company is not responsible for delays due to weather, traffic or unsafe road conditions (natural events, accidents or unforeseeable technical breakdowns). In such cases, the contract may be cancelled without compensation. Our liability is generally limited to the legally required public liability insurance.' },
+        storno: {
+          title: 'Cancellation Policy',
+          row1label: 'Cancellation up to 7 days before departure',
+          row1value: 'Free of charge',
+          row2label: 'Cancellation up to 2 days before departure',
+          row2value: '50%',
+          row3label: 'Cancellation up to 24 hours before departure',
+          row3value: '75%',
+          row4label: 'Cancellation from 24 hours before departure',
+          row4value: '100%',
+        },
+        gericht: { title: 'Jurisdiction', text: 'The exclusive place of jurisdiction is Düsseldorf, insofar as the client is a merchant, a legal entity under public law or a special fund under public law. This also applies if the client has no general place of jurisdiction in Germany or another EU member state.' },
+      },
+      links: {
+        impressum: 'Legal Notice',
+        datenschutz: 'Privacy Policy',
+        agb: 'T&Cs',
+        home: 'Home',
+      },
     },
   },
 } as const;
 
-type DeepWiden<T> =
-  T extends string ? string :
-  T extends number ? number :
-  T extends boolean ? boolean :
-  T extends (...args: infer A) => infer R ? (...args: A) => R :
-  T extends readonly (infer U)[] ? ReadonlyArray<DeepWiden<U>> :
-  T extends object ? { [K in keyof T]: DeepWiden<T[K]> } :
-  T;
-
-export type Translations = DeepWiden<typeof translations.de>;
+export type Translations = typeof translations.de;

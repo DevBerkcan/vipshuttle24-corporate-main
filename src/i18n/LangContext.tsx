@@ -25,8 +25,11 @@ export function LangProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('vip_lang', l);
   };
 
+  // ✅ Type-safe fix: cast translations[lang]
+  const t = translations[lang] as Translations;
+
   return (
-    <LangContext.Provider value={{ lang, setLang, t: translations[lang] }}>
+    <LangContext.Provider value={{ lang, setLang, t }}>
       {children}
     </LangContext.Provider>
   );

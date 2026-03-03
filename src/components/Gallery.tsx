@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
 const IMAGE_ALTS_DE = [
+  // 1-19 (webp / jpeg)
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, Luxusfahrzeug Innenraum',
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes am Flughafen',
   'VipShuttle24 – Hochzeitsfahrt NRW, geschmücktes Brautauto',
@@ -25,8 +26,33 @@ const IMAGE_ALTS_DE = [
   'VipShuttle24 – Luxus Limousinenservice, schwarzer Mercedes',
   'VipShuttle24 – Nachtfahrt Düsseldorf, stilvoller City Transfer',
   'VipShuttle24 – Premium Transfer NRW, Chauffeur mit Fahrgast',
+  // 20-41 (jpg)
+  'VipShuttle24 – Mercedes S-Klasse Exterieur, Premium Limousine Düsseldorf',
+  'VipShuttle24 – VIP Chauffeur Service, exklusiver Fahrgastraum',
+  'VipShuttle24 – Business Transfer NRW, professioneller Fahrservice',
+  'VipShuttle24 – Flughafentransfer Düsseldorf, pünktlicher Abholdienst',
+  'VipShuttle24 – Luxusfahrzeug Detailansicht, premium Ausstattung',
+  'VipShuttle24 – Mercedes V-Klasse Innenraum, VIP Gruppenfahrzeug NRW',
+  'VipShuttle24 – Hochzeitsfahrt Düsseldorf, elegante Brautwagenfahrt',
+  'VipShuttle24 – Geschäftsreise Limousine, Corporate Transfer NRW',
+  'VipShuttle24 – Premium Fahrdienst, schwarzer Mercedes Exterieur',
+  'VipShuttle24 – Chauffeur Düsseldorf, stilvoller Abendtransfer',
+  'VipShuttle24 – Luxus Van NRW, Gruppenreise mit Komfort',
+  'VipShuttle24 – VIP Transfer Düsseldorf, exklusive Fahrzeugflotte',
+  'VipShuttle24 – Mercedes E-Klasse Innenraum, Business Ambiente',
+  'VipShuttle24 – Nacht Transfer NRW, Premium Limousinenservice',
+  'VipShuttle24 – Messe Düsseldorf Transfer, professioneller Shuttle',
+  'VipShuttle24 – Flughafen Meet and Greet, VIP Empfangsservice',
+  'VipShuttle24 – Hochzeitsfahrzeug NRW, geschmückter Luxus-Mercedes',
+  'VipShuttle24 – Premium Chauffeur Köln, eleganter Fahrdienst',
+  'VipShuttle24 – Corporate Roadshow Limousine, Geschäftsreise Service',
+  'VipShuttle24 – Luxus Innenraum Detail, erstklassige Ausstattung',
+  'VipShuttle24 – VIP Gruppenfahrt NRW, Mercedes V-Klasse Premium',
+  'VipShuttle24 – Premium Transfer Abschluss, exklusiver Chauffeurservice',
 ];
+
 const IMAGE_ALTS_EN = [
+  // 1-19 (webp / jpeg)
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, luxury vehicle interior',
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes at the airport',
   'VipShuttle24 – Wedding Ride NRW, decorated bridal car',
@@ -46,7 +72,39 @@ const IMAGE_ALTS_EN = [
   'VipShuttle24 – Luxury limousine service, black Mercedes',
   'VipShuttle24 – Night ride Düsseldorf, stylish city transfer',
   'VipShuttle24 – Premium transfer NRW, chauffeur with passenger',
+  // 20-41 (jpg)
+  'VipShuttle24 – Mercedes S-Class exterior, premium sedan Düsseldorf',
+  'VipShuttle24 – VIP chauffeur service, exclusive passenger cabin',
+  'VipShuttle24 – Business transfer NRW, professional driving service',
+  'VipShuttle24 – Airport transfer Düsseldorf, punctual pick-up service',
+  'VipShuttle24 – Luxury vehicle detail view, premium interior',
+  'VipShuttle24 – Mercedes V-Class interior, VIP group vehicle NRW',
+  'VipShuttle24 – Wedding ride Düsseldorf, elegant bridal car journey',
+  'VipShuttle24 – Business trip limousine, corporate transfer NRW',
+  'VipShuttle24 – Premium driving service, black Mercedes exterior',
+  'VipShuttle24 – Chauffeur Düsseldorf, stylish evening transfer',
+  'VipShuttle24 – Luxury van NRW, group travel in comfort',
+  'VipShuttle24 – VIP transfer Düsseldorf, exclusive vehicle fleet',
+  'VipShuttle24 – Mercedes E-Class interior, business ambience',
+  'VipShuttle24 – Night transfer NRW, premium limousine service',
+  'VipShuttle24 – Trade fair Düsseldorf transfer, professional shuttle',
+  'VipShuttle24 – Airport meet and greet, VIP reception service',
+  'VipShuttle24 – Wedding vehicle NRW, decorated luxury Mercedes',
+  'VipShuttle24 – Premium chauffeur Cologne, elegant driving service',
+  'VipShuttle24 – Corporate roadshow limousine, business travel service',
+  'VipShuttle24 – Luxury interior detail, first-class fittings',
+  'VipShuttle24 – VIP group ride NRW, Mercedes V-Class premium',
+  'VipShuttle24 – Premium transfer finale, exclusive chauffeur service',
 ];
+
+// Build the images array respecting the mixed extensions:
+// 1–18 → .webp | 19 → .jpeg | 20–41 → .jpg
+const buildImages = (alts: string[]) =>
+  alts.map((alt, i) => {
+    const n = i + 1;
+    const ext = n <= 19 ? 'webp' : n === 20 ? 'jpeg' : 'jpg';
+    return { src: `/${n}.${ext}`, alt };
+  });
 
 const Gallery = () => {
   const { t, lang } = useLang();
@@ -55,14 +113,20 @@ const Gallery = () => {
   const [expanded, setExpanded] = useState(false);
 
   const alts = lang === 'de' ? IMAGE_ALTS_DE : IMAGE_ALTS_EN;
-  const images = Array.from({ length: 19 }, (_, i) => ({ src: `/${i + 1}.webp`, alt: alts[i] }));
+  const images = buildImages(alts);
 
   const INITIAL_COUNT = 6;
   const visibleImages = expanded ? images : images.slice(0, INITIAL_COUNT);
   const remaining = images.length - INITIAL_COUNT;
 
-  const handlePrev = useCallback(() => setSelectedImage((prev) => prev !== null ? (prev > 0 ? prev - 1 : images.length - 1) : null), [images.length]);
-  const handleNext = useCallback(() => setSelectedImage((prev) => prev !== null ? (prev < images.length - 1 ? prev + 1 : 0) : null), [images.length]);
+  const handlePrev = useCallback(
+    () => setSelectedImage((prev) => prev !== null ? (prev > 0 ? prev - 1 : images.length - 1) : null),
+    [images.length],
+  );
+  const handleNext = useCallback(
+    () => setSelectedImage((prev) => prev !== null ? (prev < images.length - 1 ? prev + 1 : 0) : null),
+    [images.length],
+  );
 
   return (
     <>

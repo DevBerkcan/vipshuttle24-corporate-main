@@ -25,7 +25,7 @@ A world-class, corporate chauffeur service website with midnight blue and silver
    - Video background (with poster image fallback)
    - Powerful headline: "Ihre Reise beginnt mit Exzellenz"
    - Clear CTAs: "Jetzt buchen" and "Services entdecken"
-   - Trust indicators: 24/7, 10+ Jahre, 100% Diskretion
+   - Trust indicators: 24/7, 20+ Jahre, 100% Diskretion
 
 2. **Services Section**
    - Airport Transfer (Flughafen-Transfer)
