@@ -23,15 +23,17 @@ const VEHICLE_IMAGES = [
   },
   {
     image: '/25.jpg',
+    position: 'bottom',
     altDe: 'Mercedes-Benz Sprinter & V-Klasse - VipShuttle24 Gruppenflotte Düsseldorf Flughafen',
     altEn: 'Mercedes-Benz Sprinter & V-Class - VipShuttle24 Group Fleet Düsseldorf Airport',
   },
+
   {
     image: '/27.jpg',
     altDe: 'Mercedes-Benz Tourismo Luxusbus - VipShuttle24 Gruppenreisen & Events',
     altEn: 'Mercedes-Benz Tourismo Luxury Coach - VipShuttle24 Group Travel & Events',
   },
-    {
+  {
     image: '/30.jpg',
     altDe: 'Mercedes-Benz Tourismo Luxusbus - VipShuttle24 Gruppenreisen & Events',
     altEn: 'Mercedes-Benz Tourismo Luxury Coach - VipShuttle24 Group Travel & Events',
@@ -43,16 +45,18 @@ const Fleet = () => {
   const f = t.fleet;
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-const vehicles = f.vehicles
-  .slice(0, VEHICLE_IMAGES.length)  // 👈 caps at 6
-  .map((v, i) => {
-    const img = VEHICLE_IMAGES[i];
-    return {
-      ...v,
-      image: img.image,
-      alt: lang === 'de' ? img.altDe : img.altEn,
-    };
-  });
+  const vehicles = f.vehicles
+    .slice(0, VEHICLE_IMAGES.length)
+    .map((v, i) => {
+      const img = VEHICLE_IMAGES[i];
+      return {
+        ...v,
+        image: img.image,
+        position: img.position,   // 👈 add this
+        alt: lang === 'de' ? img.altDe : img.altEn,
+      };
+    });
+
 
   const handlePrev = () =>
     setSelectedImage((p) => (p !== null ? (p > 0 ? p - 1 : vehicles.length - 1) : null));
@@ -91,8 +95,9 @@ const vehicles = f.vehicles
                   src={vehicle.image}
                   alt={vehicle.alt}
                   fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                  style={{ objectPosition: vehicle.position }}   // 👈
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5">
@@ -157,6 +162,7 @@ const vehicles = f.vehicles
                 src={vehicles[selectedImage].image}
                 alt={vehicles[selectedImage].alt}
                 fill
+                style={{ objectPosition: vehicles[selectedImage].position }}   // 👈
                 className="object-cover"
                 sizes="(max-width: 1280px) 95vw, 1280px"
               />

@@ -9,7 +9,7 @@ const ICONS = [FaPlane, FaHeart, FaBriefcase, FaBus];
 const IMAGES = [
   { src: '/2.webp',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen' },
   { src: '/3.webp',  alt: 'VipShuttle24 Hochzeitsfahrt NRW – Luxus Brautauto Mercedes' },
-  { src: '/4.webp',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service' },
+  { src: '/16.webp',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service' },
   { src: '/27.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse am Flughafen' },
 ];
 
