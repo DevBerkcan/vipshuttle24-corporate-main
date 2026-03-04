@@ -1,16 +1,18 @@
 'use client';
 
-import { FaPlane, FaHeart, FaBriefcase, FaBus, FaArrowRight } from 'react-icons/fa';
+import { FaPlane, FaBriefcase, FaBus, FaStar, FaArrowRight, FaCar, FaGlassCheers } from 'react-icons/fa';
 import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
-const ICONS = [FaPlane, FaHeart, FaBriefcase, FaBus];
+const ICONS = [FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaGlassCheers];
 
 const IMAGES = [
   { src: '/2.webp',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen' },
-  { src: '/3.webp',  alt: 'VipShuttle24 Hochzeitsfahrt NRW – Luxus Brautauto Mercedes' },
-  { src: '/16.webp',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service' },
-  { src: '/27.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse am Flughafen' },
+  { src: '/16.webp', alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service' },
+  { src: '/22.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
+  { src: '/27.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
+  { src: '/8.webp',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
+  { src: '/1.webp',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
 ];
 
 const Services = () => {
@@ -42,8 +44,8 @@ const Services = () => {
 
         <div className="space-y-6 sm:space-y-8">
           {s.items.map((service, index) => {
-            const Icon = ICONS[index];
-            const img  = IMAGES[index];
+            const Icon = ICONS[index] ?? FaCar;
+            const img  = IMAGES[index] ?? IMAGES[0];
             return (
               <article
                 key={service.title}
@@ -62,6 +64,7 @@ const Services = () => {
                       alt={img.alt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
+                      style={{ objectPosition: img.position ?? 'center' }}
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       priority={index === 0}
                     />
