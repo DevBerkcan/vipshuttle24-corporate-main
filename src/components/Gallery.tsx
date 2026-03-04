@@ -97,14 +97,13 @@ const IMAGE_ALTS_EN = [
   'VipShuttle24 – Premium transfer finale, exclusive chauffeur service',
 ];
 
-// Build the images array respecting the mixed extensions:
-// 1–18 → .webp | 19 → .jpeg | 20–41 → .jpg
 const buildImages = (alts: string[]) =>
   alts.map((alt, i) => {
     const n = i + 1;
-    const ext = n <= 19 ? 'webp' : n === 20 ? 'jpeg' : 'jpg';
+    const ext = n <= 18 ? 'webp' : n === 19 ? 'jpeg' : n <= 31 ? 'jpg' : 'JPG';
     return { src: `/${n}.${ext}`, alt };
   });
+
 
 const Gallery = () => {
   const { t, lang } = useLang();
