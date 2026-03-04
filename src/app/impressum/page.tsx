@@ -45,7 +45,6 @@ export default function Impressum({ searchParams }: { searchParams?: { lang?: st
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{i.s2Title}</h2>
             <div className="text-silver/70 space-y-2">
               <p>{i.s2Mobile}: <a href="tel:+491772472408" className="text-silver hover:text-platinum transition-colors">+49 177 2472408</a></p>
-              <p>{i.s2Phone}: <a href="tel:+4921154232741" className="text-silver hover:text-platinum transition-colors">+49 211 54232741</a></p>
               <p>{i.s2Email}: <a href="mailto:info@vipshuttle24.de" className="text-silver hover:text-platinum transition-colors">info@vipshuttle24.de</a></p>
             </div>
           </section>
