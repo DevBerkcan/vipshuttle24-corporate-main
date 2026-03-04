@@ -100,7 +100,7 @@ const IMAGE_ALTS_EN = [
 const buildImages = (alts: string[]) =>
   alts.map((alt, i) => {
     const n = i + 1;
-    const ext = n <= 18 ? 'webp' : n === 19 ? 'jpeg' : n <= 31 ? 'jpg' : 'JPG';
+    const ext = n <= 19 ? 'webp' : n === 20 ? 'jpeg' : n <= 31 ? 'jpg' : 'JPG';
     return { src: `/${n}.${ext}`, alt };
   });
 
