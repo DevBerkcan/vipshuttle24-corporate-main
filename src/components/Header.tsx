@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FaPhone, FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { useLang } from '@/i18n/LangContext';
 import LangSwitcher from './LangSwitcher';
@@ -35,9 +36,15 @@ const Header = () => {
 
           {/* Logo */}
           <a href="/" className="relative group" aria-label={t.header.home}>
-            <div className="flex items-baseline space-x-1">
-              <span className="text-2xl lg:text-3xl font-display font-bold text-silver tracking-tight">VIPSHUTTLE</span>
-              <span className="text-xl lg:text-2xl font-display font-light text-silver/70">24</span>
+            <div className="relative w-40 lg:w-52 h-12 lg:h-14">
+              <Image
+                src="/logo-new1.png"
+                alt="VIPSHUTTLE 24 Logo"
+                fill
+                sizes="(max-width: 1024px) 160px, 208px"
+                className="object-contain object-left"
+                priority
+              />
             </div>
             <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-silver to-transparent transition-all duration-500" />
           </a>
