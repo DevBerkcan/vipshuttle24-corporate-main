@@ -38,7 +38,7 @@ const Header = () => {
           <a href="/" className="relative group" aria-label={t.header.home}>
             <div className="relative w-40 lg:w-52 h-12 lg:h-14">
               <Image
-                src="/logo-new1.png"
+                src="/logo.png"
                 alt="VIPSHUTTLE 24 Logo"
                 fill
                 sizes="(max-width: 1024px) 160px, 208px"
