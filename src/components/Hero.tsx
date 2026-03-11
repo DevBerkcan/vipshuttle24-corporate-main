@@ -15,7 +15,6 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover"
           poster="/13.webp" aria-hidden="true" title="VipShuttle24 Premium Chauffeur Service Düsseldorf">
-          <source src="/Video.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay" />
       </div>
