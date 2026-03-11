@@ -27,7 +27,6 @@ const VEHICLE_IMAGES = [
     altDe: 'Mercedes-Benz Sprinter & V-Klasse - VipShuttle24 Gruppenflotte Düsseldorf Flughafen',
     altEn: 'Mercedes-Benz Sprinter & V-Class - VipShuttle24 Group Fleet Düsseldorf Airport',
   },
-
   {
     image: '/27.jpg',
     altDe: 'Mercedes-Benz Tourismo Luxusbus - VipShuttle24 Gruppenreisen & Events',
@@ -52,16 +51,21 @@ const Fleet = () => {
       return {
         ...v,
         image: img.image,
-        position: img.position,   // 👈 add this
+        position: img.position,
         alt: lang === 'de' ? img.altDe : img.altEn,
       };
     });
-
 
   const handlePrev = () =>
     setSelectedImage((p) => (p !== null ? (p > 0 ? p - 1 : vehicles.length - 1) : null));
   const handleNext = () =>
     setSelectedImage((p) => (p !== null ? (p < vehicles.length - 1 ? p + 1 : 0) : null));
+
+  const stats = [
+    { value: f.stat1Value, label: f.stat1Label },
+    { value: f.stat2Value, label: f.stat2Label },
+    { value: f.stat3Value, label: f.stat3Label },
+  ];
 
   return (
     <>
@@ -69,12 +73,15 @@ const Fleet = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-silver/3 rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
           {/* Section header */}
           <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-20">
             <div className="inline-block px-5 py-2 glass-card mb-5">
               <span className="text-silver text-xs sm:text-sm font-medium tracking-widest uppercase">{f.badge}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-4 leading-tight">{f.headline}</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-gradient mb-4 leading-tight">
+              {f.headline}
+            </h2>
             <p className="text-silver/70 text-sm sm:text-base lg:text-lg leading-relaxed">{f.subline}</p>
           </div>
 
@@ -95,7 +102,7 @@ const Fleet = () => {
                   src={vehicle.image}
                   alt={vehicle.alt}
                   fill
-                  style={{ objectPosition: vehicle.position }}   // 👈
+                  style={{ objectPosition: vehicle.position }}
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
                 />
@@ -111,17 +118,14 @@ const Fleet = () => {
 
           {/* Stats */}
           <div className="mt-10 sm:mt-16 grid grid-cols-3 gap-3 sm:gap-6 text-center max-w-7xl mx-auto">
-            {[
-              { value: f.stat1Value, label: f.stat1Label },
-              { value: f.stat2Value, label: f.stat2Label },
-              { value: f.stat3Value, label: f.stat3Label },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div key={stat.label} className="glass-card p-4 sm:p-6">
                 <div className="text-lg sm:text-2xl lg:text-3xl font-display font-bold text-gradient mb-1 sm:mb-2">{stat.value}</div>
                 <div className="text-silver/70 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -162,7 +166,7 @@ const Fleet = () => {
                 src={vehicles[selectedImage].image}
                 alt={vehicles[selectedImage].alt}
                 fill
-                style={{ objectPosition: vehicles[selectedImage].position }}   // 👈
+                style={{ objectPosition: vehicles[selectedImage].position }}
                 className="object-cover"
                 sizes="(max-width: 1280px) 95vw, 1280px"
               />

@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useCallback } from 'react';
-import { FaTimes, FaChevronLeft, FaChevronRight, FaImages, FaChevronDown } from 'react-icons/fa';
+import { useState, useCallback, useRef } from 'react';
+import { FaTimes, FaChevronLeft, FaChevronRight, FaImages, FaChevronDown, FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
 const IMAGE_ALTS_DE = [
-  // 1-19 (webp / jpeg)
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, Luxusfahrzeug Innenraum',
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes am Flughafen',
   'VipShuttle24 – Hochzeitsfahrt NRW, geschmücktes Brautauto',
@@ -26,7 +25,6 @@ const IMAGE_ALTS_DE = [
   'VipShuttle24 – Luxus Limousinenservice, schwarzer Mercedes',
   'VipShuttle24 – Nachtfahrt Düsseldorf, stilvoller City Transfer',
   'VipShuttle24 – Premium Transfer NRW, Chauffeur mit Fahrgast',
-  // 20-41 (jpg)
   'VipShuttle24 – Mercedes S-Klasse Exterieur, Premium Limousine Düsseldorf',
   'VipShuttle24 – VIP Chauffeur Service, exklusiver Fahrgastraum',
   'VipShuttle24 – Business Transfer NRW, professioneller Fahrservice',
@@ -52,7 +50,6 @@ const IMAGE_ALTS_DE = [
 ];
 
 const IMAGE_ALTS_EN = [
-  // 1-19 (webp / jpeg)
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, luxury vehicle interior',
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes at the airport',
   'VipShuttle24 – Wedding Ride NRW, decorated bridal car',
@@ -72,7 +69,6 @@ const IMAGE_ALTS_EN = [
   'VipShuttle24 – Luxury limousine service, black Mercedes',
   'VipShuttle24 – Night ride Düsseldorf, stylish city transfer',
   'VipShuttle24 – Premium transfer NRW, chauffeur with passenger',
-  // 20-41 (jpg)
   'VipShuttle24 – Mercedes S-Class exterior, premium sedan Düsseldorf',
   'VipShuttle24 – VIP chauffeur service, exclusive passenger cabin',
   'VipShuttle24 – Business transfer NRW, professional driving service',
@@ -97,35 +93,137 @@ const IMAGE_ALTS_EN = [
   'VipShuttle24 – Premium transfer finale, exclusive chauffeur service',
 ];
 
-const buildImages = (alts: string[]) =>
-  alts.map((alt, i) => {
+type MediaItem =
+  | { type: 'image'; src: string; alt: string }
+  | { type: 'video'; src: string; alt: string };
+
+const buildMedia = (alts: string[], lang: 'de' | 'en'): MediaItem[] => {
+  const images: MediaItem[] = alts.map((alt, i) => {
     const n = i + 1;
     const ext = n <= 19 ? 'webp' : n === 20 ? 'jpeg' : n <= 31 ? 'jpg' : 'JPG';
-    return { src: `/${n}.${ext}`, alt };
+    return { type: 'image', src: `/${n}.${ext}`, alt };
   });
 
+  const videoAlt =
+    lang === 'de'
+      ? 'VipShuttle24 – Premium Chauffeur Service Video, Düsseldorf NRW'
+      : 'VipShuttle24 – Premium Chauffeur Service Video, Düsseldorf NRW';
+
+  const video: MediaItem = { type: 'video', src: '/video_1.mp4', alt: videoAlt };
+
+  return [images[0], video, ...images.slice(1)];
+};
+
+const VideoThumbnail = ({ onClick, label }: { onClick: () => void; label: string }) => (
+  <div
+    className="group relative overflow-hidden rounded-lg glass-card cursor-pointer"
+    style={{ aspectRatio: '4/3' }}
+    onClick={onClick}
+    role="button"
+    tabIndex={0}
+    aria-label={label}
+    onKeyDown={(e) => e.key === 'Enter' && onClick()}
+  >
+    <video
+      src="/video_1.mp4"
+      className="w-full h-full object-cover"
+      muted
+      playsInline
+      preload="metadata"
+    />
+    <div className="absolute inset-0 bg-midnight/50 flex items-center justify-center transition-colors duration-300 group-hover:bg-midnight/30">
+      <div className="w-14 h-14 glass-card rounded-full flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+        <FaPlay className="text-silver text-xl ml-1" aria-hidden="true" />
+      </div>
+    </div>
+  </div>
+);
+
+const LightboxVideo = ({ src }: { src: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(true);
+  const [muted, setMuted] = useState(false);
+
+  const togglePlay = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setPlaying(false);
+    }
+  };
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    videoRef.current.muted = !videoRef.current.muted;
+    setMuted(videoRef.current.muted);
+  };
+
+  return (
+    <div className="relative w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+      <video
+        ref={videoRef}
+        src={src}
+        className="max-w-full max-h-full rounded-lg object-contain"
+        autoPlay
+        playsInline
+        controls={false}
+        style={{ maxHeight: '78vh' }}
+      />
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
+        <button
+          onClick={togglePlay}
+          className="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300"
+          aria-label={playing ? 'Pause' : 'Play'}
+        >
+          {playing ? (
+            <FaPause className="text-silver text-sm" />
+          ) : (
+            <FaPlay className="text-silver text-sm ml-0.5" />
+          )}
+        </button>
+        <button
+          onClick={toggleMute}
+          className="w-10 h-10 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300"
+          aria-label={muted ? 'Unmute' : 'Mute'}
+        >
+          {muted ? (
+            <FaVolumeMute className="text-silver text-sm" />
+          ) : (
+            <FaVolumeUp className="text-silver text-sm" />
+          )}
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const Gallery = () => {
   const { t, lang } = useLang();
   const g = t.gallery;
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [expanded, setExpanded] = useState(false);
 
-  const alts = lang === 'de' ? IMAGE_ALTS_DE : IMAGE_ALTS_EN;
-  const images = buildImages(alts);
+  const media = buildMedia(lang === 'de' ? IMAGE_ALTS_DE : IMAGE_ALTS_EN, lang);
 
   const INITIAL_COUNT = 6;
-  const visibleImages = expanded ? images : images.slice(0, INITIAL_COUNT);
-  const remaining = images.length - INITIAL_COUNT;
+  const visibleMedia = expanded ? media : media.slice(0, INITIAL_COUNT);
+  const remaining = media.length - INITIAL_COUNT;
 
   const handlePrev = useCallback(
-    () => setSelectedImage((prev) => prev !== null ? (prev > 0 ? prev - 1 : images.length - 1) : null),
-    [images.length],
+    () => setSelectedIndex((prev) => prev !== null ? (prev > 0 ? prev - 1 : media.length - 1) : null),
+    [media.length],
   );
   const handleNext = useCallback(
-    () => setSelectedImage((prev) => prev !== null ? (prev < images.length - 1 ? prev + 1 : 0) : null),
-    [images.length],
+    () => setSelectedIndex((prev) => prev !== null ? (prev < media.length - 1 ? prev + 1 : 0) : null),
+    [media.length],
   );
+
+  const selectedItem = selectedIndex !== null ? media[selectedIndex] : null;
 
   return (
     <>
@@ -147,31 +245,53 @@ const Gallery = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-            {visibleImages.map((img, index) => (
-              <div key={img.src}
-                className="group relative overflow-hidden rounded-lg glass-card cursor-pointer"
-                style={{ aspectRatio: '4/3', animation: `fadeInGallery 0.4s ease-out ${Math.min(index, 5) * 0.06}s both` }}
-                onClick={() => setSelectedImage(index)} role="button" tabIndex={0}
-                aria-label={`${g.openLabel}: ${img.alt}`}
-                onKeyDown={(e) => e.key === 'Enter' && setSelectedImage(index)}>
-                <Image src={img.src} alt={img.alt} fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading={index < INITIAL_COUNT ? 'eager' : 'lazy'} />
-                <div className="absolute inset-0 bg-midnight/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-9 h-9 sm:w-11 sm:h-11 glass-card rounded-full flex items-center justify-center">
-                    <div className="w-2.5 h-2.5 bg-silver rounded-full" />
+            {visibleMedia.map((item, index) => (
+              item.type === 'video' ? (
+                <div
+                  key="video_1"
+                  style={{ animation: `fadeInGallery 0.4s ease-out ${Math.min(index, 5) * 0.06}s both` }}
+                >
+                  <VideoThumbnail
+                    onClick={() => setSelectedIndex(index)}
+                    label={`${g.openLabel}: ${item.alt}`}
+                  />
+                </div>
+              ) : (
+                <div
+                  key={item.src}
+                  className="group relative overflow-hidden rounded-lg glass-card cursor-pointer"
+                  style={{ aspectRatio: '4/3', animation: `fadeInGallery 0.4s ease-out ${Math.min(index, 5) * 0.06}s both` }}
+                  onClick={() => setSelectedIndex(index)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${g.openLabel}: ${item.alt}`}
+                  onKeyDown={(e) => e.key === 'Enter' && setSelectedIndex(index)}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading={index < INITIAL_COUNT ? 'eager' : 'lazy'}
+                  />
+                  <div className="absolute inset-0 bg-midnight/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 glass-card rounded-full flex items-center justify-center">
+                      <div className="w-2.5 h-2.5 bg-silver rounded-full" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )
             ))}
           </div>
 
-          {images.length > INITIAL_COUNT && (
+          {media.length > INITIAL_COUNT && (
             <div className="mt-8 sm:mt-10 text-center">
-              <button onClick={() => setExpanded((v) => !v)}
+              <button
+                onClick={() => setExpanded((v) => !v)}
                 className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 glass-card text-silver hover:shadow-glow transition-all duration-300 rounded-lg font-medium text-sm sm:text-base group"
-                aria-expanded={expanded}>
+                aria-expanded={expanded}
+              >
                 {expanded ? (
                   <>{g.showLess}<FaChevronDown className="transition-transform duration-300 rotate-180" aria-hidden="true" /></>
                 ) : (
@@ -183,26 +303,60 @@ const Gallery = () => {
         </div>
       </section>
 
-      {selectedImage !== null && (
-        <div className="fixed inset-0 bg-midnight/98 backdrop-blur-xl z-50 flex items-center justify-center p-3 sm:p-6"
-          onClick={() => setSelectedImage(null)} role="dialog" aria-modal="true"
-          aria-label={g.counter(selectedImage + 1, images.length)}>
-          <button onClick={() => setSelectedImage(null)}
+      {selectedIndex !== null && selectedItem !== null && (
+        <div
+          className="fixed inset-0 bg-midnight/98 backdrop-blur-xl z-50 flex items-center justify-center p-3 sm:p-6"
+          onClick={() => setSelectedIndex(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={g.counter(selectedIndex + 1, media.length)}
+        >
+          <button
+            onClick={() => setSelectedIndex(null)}
             className="absolute top-3 right-3 sm:top-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300 z-10"
-            aria-label={g.closeLabel}><FaTimes className="text-silver" /></button>
+            aria-label={g.closeLabel}
+          >
+            <FaTimes className="text-silver" />
+          </button>
+
           <div className="absolute top-3 left-1/2 -translate-x-1/2 glass-card px-3 py-1.5 rounded-full z-10">
-            <span className="text-silver text-xs sm:text-sm font-medium">{g.counter(selectedImage + 1, images.length)}</span>
+            <span className="text-silver text-xs sm:text-sm font-medium">{g.counter(selectedIndex + 1, media.length)}</span>
           </div>
-          <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+
+          <button
+            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
             className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300 z-10"
-            aria-label={g.prevLabel}><FaChevronLeft className="text-silver" /></button>
-          <button onClick={(e) => { e.stopPropagation(); handleNext(); }}
+            aria-label={g.prevLabel}
+          >
+            <FaChevronLeft className="text-silver" />
+          </button>
+
+          <button
+            onClick={(e) => { e.stopPropagation(); handleNext(); }}
             className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300 z-10"
-            aria-label={g.nextLabel}><FaChevronRight className="text-silver" /></button>
-          <div className="w-full max-w-5xl flex items-center justify-center mt-10 relative"
-            onClick={(e) => e.stopPropagation()} style={{ maxHeight: '78vh', aspectRatio: '16/9' }}>
-            <Image src={images[selectedImage].src} alt={images[selectedImage].alt} fill
-              className="object-contain rounded-lg" sizes="(max-width: 1280px) 95vw, 1280px" />
+            aria-label={g.nextLabel}
+          >
+            <FaChevronRight className="text-silver" />
+          </button>
+
+          <div
+            className="w-full max-w-5xl flex items-center justify-center mt-10"
+            style={{ maxHeight: '78vh' }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {selectedItem.type === 'video' ? (
+              <LightboxVideo src={selectedItem.src} />
+            ) : (
+              <div className="relative w-full" style={{ maxHeight: '78vh', aspectRatio: '16/9' }}>
+                <Image
+                  src={selectedItem.src}
+                  alt={selectedItem.alt}
+                  fill
+                  className="object-contain rounded-lg"
+                  sizes="(max-width: 1280px) 95vw, 1280px"
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

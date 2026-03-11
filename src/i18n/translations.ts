@@ -32,59 +32,59 @@ export const translations = {
       stat3Label: 'Diskretion',
       statsAriaLabel: 'Unsere Versprechen',
     },
-  services: {
-  sectionLabel: 'Unsere Services',
-  badge: 'Unsere Services',
-  headline: 'Exzellenz in jedem Detail',
-  subline: 'Von Flughafentransfers bis zu maßgeschneiderten Gruppenreisen – erstklassige Mobilität für jeden Anlass.',
-  cta: 'Jetzt anfragen',
-  bottomText: 'Benötigen Sie einen individuellen Service?',
-  bottomCta: 'Persönliche Beratung anfragen',
-  items: [
-    {
-      title: 'Airport Transfer',
-      subtitle: 'Pünktlich und stressfrei',
-      description:
-        'Professioneller Flughafentransfer zu allen deutschen und internationalen Flughäfen. Mit Flugüberwachung in Echtzeit passen wir uns flexibel an Ihre Ankunftszeit an.',
-      features: ['Meet & Greet Service', 'Gepäckassistenz', 'Wartezeit inkludiert', 'Alle Flughäfen in NRW'],
+    services: {
+      sectionLabel: 'Unsere Services',
+      badge: 'Unsere Services',
+      headline: 'Exzellenz in jedem Detail',
+      subline: 'Von Flughafentransfers bis zu maßgeschneiderten Gruppenreisen – erstklassige Mobilität für jeden Anlass.',
+      cta: 'Jetzt anfragen',
+      bottomText: 'Benötigen Sie einen individuellen Service?',
+      bottomCta: 'Persönliche Beratung anfragen',
+      items: [
+        {
+          title: 'Airport Transfer',
+          subtitle: 'Pünktlich und stressfrei',
+          description:
+            'Professioneller Flughafentransfer zu allen deutschen und internationalen Flughäfen. Mit Flugüberwachung in Echtzeit passen wir uns flexibel an Ihre Ankunftszeit an.',
+          features: ['Meet & Greet Service', 'Gepäckassistenz', 'Wartezeit inkludiert', 'Alle Flughäfen in NRW'],
+        },
+        {
+          title: 'Business & Events',
+          subtitle: 'Geschäftsreisen und Veranstaltungen',
+          description:
+            'Professionelle Organisation Ihrer Geschäftsreisen, Roadshows und Messe-Transfers in ganz NRW. Ortskundige Fahrer, VIP-Gästebetreuung und Koordination für Galas, Konzerte und Sportevents.',
+          features: ['Geschäftsfahrten & Roadshows', 'Messe- & Eventshuttle', 'VIP- und Gästebetreuung', 'Galas, Konzerte, Sportevents'],
+        },
+        {
+          title: 'VIP & Chauffeur Service',
+          subtitle: 'Diskretion auf höchstem Niveau',
+          description:
+            'Regelmäßige Betreuung von Geschäftsleuten, Delegationen und VIP-Gästen. Mehrsprachige, ortskundige Fahrer sorgen für 24/7 erstklassigen Service – diskret, zuverlässig und professionell.',
+          features: ['VIP-Gästebetreuung', 'Mehrsprachige Fahrer', 'Diskrete Begleitung', '24/7 Premium Service'],
+        },
+        {
+          title: 'Gruppen & Bus Transfer',
+          subtitle: 'Für große Gruppen und Events',
+          description:
+            'Komfortabler Gruppentransfer mit Mercedes-Benz Sprinter oder Tourismo-Reisebus für bis zu 50 Personen. Ideal für Firmenevents, Messefahrten und Gruppenreisen in ganz NRW.',
+          features: ['Bis zu 50 Personen', 'Mercedes Sprinter & Tourismo', 'Mehrtägige Touren möglich', 'Messe- & Eventshuttle'],
+        },
+        {
+          title: 'Private Anlässe',
+          subtitle: 'Jubiläen, Geburtstage & mehr',
+          description:
+            'Unvergessliche Fahrten für Ihre persönlichen Höhepunkte – Jubiläen, Geburtstage, Abiball, Stadttouren und Sightseeing. Stilvolle Fahrzeuge und aufmerksame Chauffeure für jeden besonderen Moment.',
+          features: ['Jubiläen & Geburtstage', 'Abiball & Schulabschluss', 'Stadttouren / Sightseeing', 'Flexible Zeiteinteilung'],
+        },
+        {
+          title: 'Hotel & Messe Transfer',
+          subtitle: 'Komfortabel von A nach B',
+          description:
+            'Zuverlässige Transfers zwischen Hotel, Messe und Flughafen. Ob Expo Real, Bauma oder IAA – wir bringen Sie pünktlich, sicher und komfortabel ans Ziel und wieder zurück.',
+          features: ['Hoteltransfer', 'Messefahrten', 'Door-to-Door-Service', 'Gepäckassistenz'],
+        },
+      ],
     },
-    {
-      title: 'Business & Events',
-      subtitle: 'Geschäftsreisen und Veranstaltungen',
-      description:
-        'Professionelle Organisation Ihrer Geschäftsreisen, Roadshows und Messe-Transfers in ganz NRW. Ortskundige Fahrer, VIP-Gästebetreuung und Koordination für Galas, Konzerte und Sportevents.',
-      features: ['Geschäftsfahrten & Roadshows', 'Messe- & Eventshuttle', 'VIP- und Gästebetreuung', 'Galas, Konzerte, Sportevents'],
-    },
-    {
-      title: 'VIP & Chauffeur Service',
-      subtitle: 'Diskretion auf höchstem Niveau',
-      description:
-        'Regelmäßige Betreuung von Geschäftsleuten, Delegationen und VIP-Gästen. Mehrsprachige, ortskundige Fahrer sorgen für 24/7 erstklassigen Service – diskret, zuverlässig und professionell.',
-      features: ['VIP-Gästebetreuung', 'Mehrsprachige Fahrer', 'Diskrete Begleitung', '24/7 Premium Service'],
-    },
-    {
-      title: 'Gruppen & Bus Transfer',
-      subtitle: 'Für große Gruppen und Events',
-      description:
-        'Komfortabler Gruppentransfer mit Mercedes-Benz Sprinter oder Tourismo-Reisebus für bis zu 50 Personen. Ideal für Firmenevents, Messefahrten und Gruppenreisen in ganz NRW.',
-      features: ['Bis zu 50 Personen', 'Mercedes Sprinter & Tourismo', 'Mehrtägige Touren möglich', 'Messe- & Eventshuttle'],
-    },
-    {
-      title: 'Private Anlässe',
-      subtitle: 'Jubiläen, Geburtstage & mehr',
-      description:
-        'Unvergessliche Fahrten für Ihre persönlichen Höhepunkte – Jubiläen, Geburtstage, Abiball, Stadttouren und Sightseeing. Stilvolle Fahrzeuge und aufmerksame Chauffeure für jeden besonderen Moment.',
-      features: ['Jubiläen & Geburtstage', 'Abiball & Schulabschluss', 'Stadttouren / Sightseeing', 'Flexible Zeiteinteilung'],
-    },
-    {
-      title: 'Hotel & Messe Transfer',
-      subtitle: 'Komfortabel von A nach B',
-      description:
-        'Zuverlässige Transfers zwischen Hotel, Messe und Flughafen. Ob Expo Real, Bauma oder IAA – wir bringen Sie pünktlich, sicher und komfortabel ans Ziel und wieder zurück.',
-      features: ['Hoteltransfer', 'Messefahrten', 'Door-to-Door-Service', 'Gepäckassistenz'],
-    },
-  ],
-},
     fleet: {
       sectionLabel: 'Fahrzeugflotte',
       badge: 'Fahrzeugflotte',
@@ -94,12 +94,13 @@ export const translations = {
       closeLabel: 'Schließen',
       prevLabel: 'Vorheriges Fahrzeug',
       nextLabel: 'Nächstes Fahrzeug',
-      stat1Value: '100% Mercedes',
-      stat1Label: 'Exklusive Premiummarke',
-      stat2Value: '6 Fahrzeuge',
-      stat2Label: 'Große Premiumflotte',
+      stat1Value: '100%',
+      stat1Label: 'Zuverlässig',
+      stat2Value: '100%',
+      stat2Label: 'Diskretion',
       stat3Value: '100%',
-      stat3Label: 'Regelmäßig gewartet',
+      stat3Label: 'Professionell',
+
       // DE
       vehicles: [
         {
@@ -148,7 +149,10 @@ export const translations = {
       nextLabel: 'Nächstes Bild',
       openLabel: 'Bild öffnen',
       counter: (cur: number, total: number) => `${cur} / ${total}`,
+      playLabel: 'Video abspielen / pausieren',
+      muteLabel: 'Ton an/aus',
     },
+
     booking: {
       sectionLabel: 'Buchungsanfrage',
       badge: 'Buchungsanfrage',
@@ -187,16 +191,16 @@ export const translations = {
         phonePlaceholder: '+49 ...',
         service: 'Gewünschter Service',
         servicePlaceholder: 'Bitte wählen',
-serviceOptions: {
-  airport: 'Airport Transfer',
-  business: 'Business & Events',
-  vip: 'VIP & Chauffeur Service',
-  group: 'Gruppen & Bus Transfer',
-  private: 'Private Anlässe',
-  hotel: 'Hotel & Messe Transfer',
-  hourly: 'Stundenweise Buchung',
-  other: 'Sonstiges',
-},
+        serviceOptions: {
+          airport: 'Airport Transfer',
+          business: 'Business & Events',
+          vip: 'VIP & Chauffeur Service',
+          group: 'Gruppen & Bus Transfer',
+          private: 'Private Anlässe',
+          hotel: 'Hotel & Messe Transfer',
+          hourly: 'Stundenweise Buchung',
+          other: 'Sonstiges',
+        },
         date: 'Datum',
         time: 'Uhrzeit',
         passengers: 'Anzahl Personen',
@@ -378,59 +382,59 @@ serviceOptions: {
       stat3Label: 'Discretion',
       statsAriaLabel: 'Our promises',
     },
- services: {
-  sectionLabel: 'Our Services',
-  badge: 'Our Services',
-  headline: 'Excellence in every detail',
-  subline: 'From airport transfers to tailor-made group journeys – premium mobility for every occasion.',
-  cta: 'Request now',
-  bottomText: 'Need a custom service?',
-  bottomCta: 'Request personal consultation',
-  items: [
-    {
-      title: 'Airport Transfer',
-      subtitle: 'Punctual and stress-free',
-      description:
-        'Professional airport transfers to all domestic and international airports. With real-time flight tracking we adapt flexibly to your arrival time.',
-      features: ['Meet & Greet Service', 'Luggage assistance', 'Waiting time included', 'All airports in NRW'],
+    services: {
+      sectionLabel: 'Our Services',
+      badge: 'Our Services',
+      headline: 'Excellence in every detail',
+      subline: 'From airport transfers to tailor-made group journeys – premium mobility for every occasion.',
+      cta: 'Request now',
+      bottomText: 'Need a custom service?',
+      bottomCta: 'Request personal consultation',
+      items: [
+        {
+          title: 'Airport Transfer',
+          subtitle: 'Punctual and stress-free',
+          description:
+            'Professional airport transfers to all domestic and international airports. With real-time flight tracking we adapt flexibly to your arrival time.',
+          features: ['Meet & Greet Service', 'Luggage assistance', 'Waiting time included', 'All airports in NRW'],
+        },
+        {
+          title: 'Business & Events',
+          subtitle: 'Corporate travel and events',
+          description:
+            'Professional organisation of your business trips, roadshows and trade fair transfers throughout NRW. Multilingual drivers, VIP guest care and coordination for galas, concerts and sports events.',
+          features: ['Business trips & roadshows', 'Trade fair & event shuttle', 'VIP guest management', 'Galas, concerts, sports events'],
+        },
+        {
+          title: 'VIP & Chauffeur Service',
+          subtitle: 'Discretion at the highest level',
+          description:
+            'Regular care for executives, delegations and VIP guests. Multilingual, locally experienced drivers provide 24/7 first-class service – discreet, reliable and professional.',
+          features: ['VIP guest care', 'Multilingual drivers', 'Discreet accompaniment', '24/7 Premium Service'],
+        },
+        {
+          title: 'Group & Bus Transfer',
+          subtitle: 'For large groups and events',
+          description:
+            'Comfortable group transfers with Mercedes-Benz Sprinter or Tourismo coach for up to 50 passengers. Ideal for corporate events, trade fair shuttles and group travel throughout NRW.',
+          features: ['Up to 50 passengers', 'Mercedes Sprinter & Tourismo', 'Multi-day tours available', 'Trade fair & event shuttle'],
+        },
+        {
+          title: 'Private Occasions',
+          subtitle: 'Anniversaries, birthdays & more',
+          description:
+            'Unforgettable rides for your personal highlights – anniversaries, birthdays, prom nights, city tours and sightseeing. Stylish vehicles and attentive chauffeurs for every special moment.',
+          features: ['Anniversaries & birthdays', 'Prom & graduation', 'City tours / sightseeing', 'Flexible scheduling'],
+        },
+        {
+          title: 'Hotel & Trade Fair Transfer',
+          subtitle: 'Comfortable from A to B',
+          description:
+            'Reliable transfers between hotel, trade fair and airport. Whether Expo Real, Bauma or IAA – we get you there punctually, safely and comfortably and back again.',
+          features: ['Hotel transfer', 'Trade fair rides', 'Door-to-door service', 'Luggage assistance'],
+        },
+      ],
     },
-    {
-      title: 'Business & Events',
-      subtitle: 'Corporate travel and events',
-      description:
-        'Professional organisation of your business trips, roadshows and trade fair transfers throughout NRW. Multilingual drivers, VIP guest care and coordination for galas, concerts and sports events.',
-      features: ['Business trips & roadshows', 'Trade fair & event shuttle', 'VIP guest management', 'Galas, concerts, sports events'],
-    },
-    {
-      title: 'VIP & Chauffeur Service',
-      subtitle: 'Discretion at the highest level',
-      description:
-        'Regular care for executives, delegations and VIP guests. Multilingual, locally experienced drivers provide 24/7 first-class service – discreet, reliable and professional.',
-      features: ['VIP guest care', 'Multilingual drivers', 'Discreet accompaniment', '24/7 Premium Service'],
-    },
-    {
-      title: 'Group & Bus Transfer',
-      subtitle: 'For large groups and events',
-      description:
-        'Comfortable group transfers with Mercedes-Benz Sprinter or Tourismo coach for up to 50 passengers. Ideal for corporate events, trade fair shuttles and group travel throughout NRW.',
-      features: ['Up to 50 passengers', 'Mercedes Sprinter & Tourismo', 'Multi-day tours available', 'Trade fair & event shuttle'],
-    },
-    {
-      title: 'Private Occasions',
-      subtitle: 'Anniversaries, birthdays & more',
-      description:
-        'Unforgettable rides for your personal highlights – anniversaries, birthdays, prom nights, city tours and sightseeing. Stylish vehicles and attentive chauffeurs for every special moment.',
-      features: ['Anniversaries & birthdays', 'Prom & graduation', 'City tours / sightseeing', 'Flexible scheduling'],
-    },
-    {
-      title: 'Hotel & Trade Fair Transfer',
-      subtitle: 'Comfortable from A to B',
-      description:
-        'Reliable transfers between hotel, trade fair and airport. Whether Expo Real, Bauma or IAA – we get you there punctually, safely and comfortably and back again.',
-      features: ['Hotel transfer', 'Trade fair rides', 'Door-to-door service', 'Luggage assistance'],
-    },
-  ],
-},
     fleet: {
       sectionLabel: 'Vehicle Fleet',
       badge: 'Vehicle Fleet',
@@ -440,12 +444,13 @@ serviceOptions: {
       closeLabel: 'Close',
       prevLabel: 'Previous vehicle',
       nextLabel: 'Next vehicle',
-      stat1Value: '100% Mercedes',
-      stat1Label: 'Exclusive premium brand',
-      stat2Value: '6 vehicles',
-      stat2Label: 'Large premium fleet',
+      stat1Value: '100%',
+      stat1Label: 'Reliable',
+      stat2Value: '100%',
+      stat2Label: 'Discretion',
       stat3Value: '100%',
-      stat3Label: 'Regularly serviced',
+      stat3Label: 'Professional',
+
       // EN
       vehicles: [
         {
@@ -494,7 +499,10 @@ serviceOptions: {
       nextLabel: 'Next image',
       openLabel: 'Open image',
       counter: (cur: number, total: number) => `${cur} / ${total}`,
+      playLabel: 'Play / pause video',
+      muteLabel: 'Toggle mute',
     },
+
     booking: {
       sectionLabel: 'Booking Request',
       badge: 'Booking Request',
@@ -533,16 +541,16 @@ serviceOptions: {
         phonePlaceholder: '+49 ...',
         service: 'Requested service',
         servicePlaceholder: 'Please select',
-serviceOptions: {
-  airport: 'Airport Transfer',
-  business: 'Business & Events',
-  vip: 'VIP & Chauffeur Service',
-  group: 'Group & Bus Transfer',
-  private: 'Private Occasions',
-  hotel: 'Hotel & Trade Fair Transfer',
-  hourly: 'Hourly Booking',
-  other: 'Other',
-},
+        serviceOptions: {
+          airport: 'Airport Transfer',
+          business: 'Business & Events',
+          vip: 'VIP & Chauffeur Service',
+          group: 'Group & Bus Transfer',
+          private: 'Private Occasions',
+          hotel: 'Hotel & Trade Fair Transfer',
+          hourly: 'Hourly Booking',
+          other: 'Other',
+        },
         date: 'Date',
         time: 'Time',
         passengers: 'Number of passengers',
