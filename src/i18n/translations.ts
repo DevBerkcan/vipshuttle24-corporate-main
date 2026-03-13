@@ -119,9 +119,9 @@ export const translations = {
           description: 'Großzügiger Raum für bis zu 7 Personen ohne Abstriche beim Komfort.',
         },
         {
-          name: 'Mercedes-Benz Sprinter & V-Klasse',
+          name: 'Mercedes-Benz V-Klasse',
           category: 'Airport Flotte',
-          description: 'Sprinter und V-Klasse im Doppeleinsatz – perfekte Koordination für Gruppen-Transfers am Flughafen.',
+          description: 'V-Klasse – perfekte Koordination für Gruppen-Transfers am Flughafen.',
         },
         {
           name: 'Mercedes-Benz Tourismo',
@@ -129,9 +129,9 @@ export const translations = {
           description: 'Unser schwarzer Tourismo für Gruppen bis zu 50 Personen. Klimatisiert, premium ausgestattet.',
         },
         {
-          name: 'Mercedes-Benz Tourismo',
-          category: 'Reisebus (blau-grau)',
-          description: 'Modernster Tourismo in eleganter Blau-Grau-Lackierung für unvergessliche Gruppenreisen.',
+          name: 'Mercedes-Benz Sprinter',
+          category: 'Sprinter',
+          description: 'Modernster Sprinter in eleganter Blau-Grau-Lackierung für unvergessliche Gruppenreisen.',
         },
       ],
 
@@ -469,9 +469,9 @@ export const translations = {
           description: 'Generous space for up to 7 passengers without compromising on comfort.',
         },
         {
-          name: 'Mercedes-Benz Sprinter & V-Class',
+          name: 'Mercedes-Benz  V-Class',
           category: 'Airport Fleet',
-          description: 'Sprinter and V-Class deployed together – perfect coordination for group transfers at the airport.',
+          description: 'V-Class - perfect coordination for group transfers at the airport.',
         },
         {
           name: 'Mercedes-Benz Tourismo',
@@ -479,9 +479,9 @@ export const translations = {
           description: 'Our black Tourismo coach for groups of up to 50 passengers. Air-conditioned, premium interior.',
         },
         {
-          name: 'Mercedes-Benz Tourismo',
-          category: 'Coach (blue-grey)',
-          description: 'Latest Tourismo in elegant blue-grey finish for unforgettable group journeys.',
+          name: 'Mercedes-Benz Sprinter',
+          category: 'Sprinter',
+          description: 'Latest Sprinter in elegant blue-grey finish for unforgettable group journeys.',
         },
       ],
 
