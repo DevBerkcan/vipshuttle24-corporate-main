@@ -17,9 +17,9 @@ const VEHICLE_IMAGES = [
     altEn: 'Mercedes-Benz E-Class Business Sedan - VipShuttle24 Chauffeur Service NRW',
   },
   {
-    image: '/7.webp',
-    altDe: 'Mercedes-Benz V-Klasse VIP-Van - VipShuttle24 Gruppenfahrzeug',
-    altEn: 'Mercedes-Benz V-Class VIP Van - VipShuttle24 Group Vehicle',
+    image: '/19.webp',
+    altDe: 'Mercedes-Benz Sprinter VIP-Van - VipShuttle24 Gruppenfahrzeug',
+    altEn: 'Mercedes-Benz Sprinter VIP Van - VipShuttle24 Group Vehicle',
   },
   {
     image: '/33.jpg',
@@ -28,7 +28,7 @@ const VEHICLE_IMAGES = [
     altEn: 'Mercedes-Benz V-Class - VipShuttle24 Group Fleet Düsseldorf Airport',
   },
   {
-    image: '/27.jpg',
+    image: '/45.jpg',
     altDe: 'Mercedes-Benz Tourismo Luxusbus - VipShuttle24 Gruppenreisen & Events',
     altEn: 'Mercedes-Benz Tourismo Luxury Coach - VipShuttle24 Group Travel & Events',
   },

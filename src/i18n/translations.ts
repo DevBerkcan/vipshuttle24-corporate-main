@@ -1,3 +1,5 @@
+'use client';
+
 export type Lang = 'de' | 'en';
 
 export const translations = {
@@ -19,7 +21,8 @@ export const translations = {
       badge: 'Premium Chauffeur Service Düsseldorf',
       headline1: 'Ihre Reise beginnt',
       headline2: 'mit Exzellenz',
-      description: 'Erstklassiger Chauffeur-Service in Düsseldorf und NRW. Diskretion, Pünktlichkeit und Komfort auf höchstem Niveau.',
+      description:
+        'Erstklassiger Chauffeur-Service in Düsseldorf und NRW. Diskretion, Pünktlichkeit und Komfort auf höchstem Niveau.',
       cta1: 'Jetzt buchen',
       cta1Label: 'Jetzt Chauffeur buchen',
       cta2: 'Services entdecken',
@@ -36,7 +39,8 @@ export const translations = {
       sectionLabel: 'Unsere Services',
       badge: 'Unsere Services',
       headline: 'Exzellenz in jedem Detail',
-      subline: 'Von Flughafentransfers bis zu maßgeschneiderten Gruppenreisen – erstklassige Mobilität für jeden Anlass.',
+      subline:
+        'Von Flughafentransfers bis zu maßgeschneiderten Gruppenreisen – erstklassige Mobilität für jeden Anlass.',
       cta: 'Jetzt anfragen',
       bottomText: 'Benötigen Sie einen individuellen Service?',
       bottomCta: 'Persönliche Beratung anfragen',
@@ -89,7 +93,8 @@ export const translations = {
       sectionLabel: 'Fahrzeugflotte',
       badge: 'Fahrzeugflotte',
       headline: 'Exklusive Mercedes-Flotte für jeden Anlass',
-      subline: 'Ausschließlich gepflegte Mercedes-Fahrzeuge – Limousinen, Vans und Reisebusse für höchste Ansprüche an Komfort und Stil.',
+      subline:
+        'Ausschließlich gepflegte Mercedes-Fahrzeuge – Limousinen, Vans und Reisebusse für höchste Ansprüche an Komfort und Stil.',
       viewLabel: 'ansehen',
       closeLabel: 'Schließen',
       prevLabel: 'Vorheriges Fahrzeug',
@@ -101,12 +106,12 @@ export const translations = {
       stat3Value: '100%',
       stat3Label: 'Professionell',
 
-      // DE
       vehicles: [
         {
           name: 'Mercedes-Benz S-Klasse',
           category: 'Luxus-Limousine',
-          description: 'Unsere Flaggschiff-Limousine für höchste Ansprüche. Maximaler Komfort, modernste Technologie und überlegene Eleganz.',
+          description:
+            'Unsere Flaggschiff-Limousine für höchste Ansprüche. Maximaler Komfort, modernste Technologie und überlegene Eleganz.',
         },
         {
           name: 'Mercedes-Benz E-Klasse',
@@ -114,7 +119,7 @@ export const translations = {
           description: 'Eleganz und Komfort vereint. Ideal für Geschäftsreisen und repräsentative Anlässe.',
         },
         {
-          name: 'Mercedes-Benz V-Klasse',
+          name: 'Mercedes-Benz Sprinter',
           category: 'VIP-Van',
           description: 'Großzügiger Raum für bis zu 7 Personen ohne Abstriche beim Komfort.',
         },
@@ -134,14 +139,15 @@ export const translations = {
           description: 'Modernster Sprinter in eleganter Blau-Grau-Lackierung für unvergessliche Gruppenreisen.',
         },
       ],
-
     },
+
     gallery: {
       sectionLabel: 'Bildergalerie VipShuttle24',
       badge: 'Galerie',
       headline1: 'Erleben Sie',
       headline2: 'unseren Service',
       subline: 'Einblicke in unsere Fahrzeuge und unvergessliche Momente mit VIPSHUTTLE24 in Düsseldorf und NRW.',
+      // With 45 total media items (44 images + 1 video), initial 6 => remaining 39
       showMore: (n: number) => `Alle ${n} weiteren Fotos anzeigen`,
       showLess: 'Weniger anzeigen',
       closeLabel: 'Schließen',
@@ -213,7 +219,8 @@ export const translations = {
         destinationPlaceholder: 'z.B. Innenstadt Düsseldorf',
         message: 'Weitere Wünsche',
         messagePlaceholder: 'Kindersitz, Rollstuhlzugang, besondere Wünsche...',
-        required: '* Pflichtfelder. Durch das Absenden öffnet sich Ihr E-Mail-Programm mit Ihrer vorausgefüllten Anfrage.',
+        required:
+          '* Pflichtfelder. Durch das Absenden öffnet sich Ihr E-Mail-Programm mit Ihrer vorausgefüllten Anfrage.',
         submit: 'Anfrage per E-Mail senden',
       },
       emailSubject: (service: string, date: string) => `Buchungsanfrage – ${service} – ${date || 'Datum offen'}`,
@@ -267,26 +274,33 @@ export const translations = {
         s2Phone: 'Telefon',
         s2Email: 'E-Mail',
         s3Title: 'Allgemeiner Disclaimer',
-        s3Text: 'Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen sowie die Richtigkeit der Eintragungen kann keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende Links erreicht werden. Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich. Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information.',
+        s3Text:
+          'Für Vollständigkeit, Fehler redaktioneller und technischer Art, Auslassungen sowie die Richtigkeit der Eintragungen kann keine Haftung übernommen werden. Insbesondere kann keine Gewähr für die Vollständigkeit und Richtigkeit von Informationen übernommen werden, die über weiterführende Links erreicht werden. Anbieter sind für die eigenen Inhalte, die sie zur Nutzung bereithalten, nach den allgemeinen Gesetzen verantwortlich. Die Verweise durch Hyperlinks auf Inhalte fremder Webseiten dienen lediglich der Information.',
         s4Title: 'Streitschlichtung',
         s4Text: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:',
-        s4Suffix: 'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+        s4Suffix:
+          'Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
       },
       datenschutz: {
         pageTitle: 'Datenschutzerklärung | VIPSHUTTLE24 Düsseldorf',
         h1: 'Datenschutzerklärung',
         s1Title: '1. Datenschutz auf einen Blick',
         s1h2: 'Allgemeine Hinweise',
-        s1p1: 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
+        s1p1:
+          'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
         s1h3: 'Datenerfassung auf dieser Website',
-        s1p2: 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. Kontaktformular). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (technische Daten wie Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).',
+        s1p2:
+          'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. Kontaktformular). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (technische Daten wie Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).',
         s1h4: 'Ihre Rechte',
-        s1p3: 'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.',
+        s1p3:
+          'Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.',
         s2Title: '2. Hosting',
         s2h2: 'RAIDBOXES',
-        s2p1: 'Wir hosten die Inhalte unserer Website bei RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. Wenn Sie unsere Website besuchen, erfasst RAIDBOXES verschiedene Logfiles inklusive Ihrer IP-Adressen. Die Verwendung von RAIDBOXES erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.',
+        s2p1:
+          'Wir hosten die Inhalte unserer Website bei RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. Wenn Sie unsere Website besuchen, erfasst RAIDBOXES verschiedene Logfiles inklusive Ihrer IP-Adressen. Die Verwendung von RAIDBOXES erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.',
         s2h3: 'Cloudflare',
-        s2p2: 'Wir nutzen den Service von Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare bietet ein weltweit verteiltes Content Delivery Network. Der Einsatz erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework (DPF).',
+        s2p2:
+          'Wir nutzen den Service von Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare bietet ein weltweit verteiltes Content Delivery Network. Der Einsatz erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework (DPF).',
         s3Title: '3. Verantwortliche Stelle',
         s3Name: 'Vipshuttle24',
         s3Person: 'Ahmet Bostanci',
@@ -297,25 +311,34 @@ export const translations = {
         s3Email: 'E-Mail',
         s4Title: '4. Datenerfassung auf dieser Website',
         s4h2: 'Cookies',
-        s4p1: 'Unsere Internetseiten verwenden sogenannte Cookies. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.',
+        s4p1:
+          'Unsere Internetseiten verwenden sogenannte Cookies. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.',
         s4h3: 'Kontaktformular & E-Mail',
-        s4p2: 'Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.',
+        s4p2:
+          'Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.',
         s4h4: 'Kommunikation via WhatsApp',
-        s4p3: 'Für die Kommunikation nutzen wir WhatsApp Business der WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Die Kommunikation erfolgt über Ende-zu-Ende-Verschlüsselung. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework.',
+        s4p3:
+          'Für die Kommunikation nutzen wir WhatsApp Business der WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Die Kommunikation erfolgt über Ende-zu-Ende-Verschlüsselung. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Das Unternehmen verfügt über eine Zertifizierung nach dem EU-US Data Privacy Framework.',
         s5Title: '5. Soziale Medien',
-        s5p1: 'Auf dieser Website sind Elemente von sozialen Medien (Facebook, Instagram) eingebunden. Diese werden nur zusammen mit der Shariff-Lösung eingesetzt, die verhindert, dass beim Seitenaufruf bereits Daten übertragen werden. Erst bei aktivem Klick auf das Social-Media-Element wird eine Verbindung hergestellt (Art. 6 Abs. 1 lit. a DSGVO).',
+        s5p1:
+          'Auf dieser Website sind Elemente von sozialen Medien (Facebook, Instagram) eingebunden. Diese werden nur zusammen mit der Shariff-Lösung eingesetzt, die verhindert, dass beim Seitenaufruf bereits Daten übertragen werden. Erst bei aktivem Klick auf das Social-Media-Element wird eine Verbindung hergestellt (Art. 6 Abs. 1 lit. a DSGVO).',
         s6Title: '6. Analyse-Tools',
         s6h2: 'WP Statistics',
-        s6p1: 'Diese Website nutzt WP Statistics (Veronalabs, Tallinn, Estland) zur anonymisierten Auswertung der Besucherzugriffe. Die erfassten Daten werden ausschließlich auf unserem eigenen Server gespeichert. IP-Adressen werden anonymisiert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s6p1:
+          'Diese Website nutzt WP Statistics (Veronalabs, Tallinn, Estland) zur anonymisierten Auswertung der Besucherzugriffe. Die erfassten Daten werden ausschließlich auf unserem eigenen Server gespeichert. IP-Adressen werden anonymisiert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
         s7Title: '7. Plugins und Tools',
         s7h2: 'YouTube (erweiterter Datenschutz)',
-        s7p1: 'Diese Website bindet Videos von YouTube ein (Google Ireland Limited, Dublin 4, Irland). Wir nutzen den erweiterten Datenschutzmodus. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Google ist nach dem EU-US Data Privacy Framework zertifiziert.',
+        s7p1:
+          'Diese Website bindet Videos von YouTube ein (Google Ireland Limited, Dublin 4, Irland). Wir nutzen den erweiterten Datenschutzmodus. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Google ist nach dem EU-US Data Privacy Framework zertifiziert.',
         s7h3: 'Font Awesome',
-        s7p2: 'Diese Seite nutzt Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) zur Darstellung von Icons. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s7p2:
+          'Diese Seite nutzt Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) zur Darstellung von Icons. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
         s7h4: 'OpenStreetMap',
-        s7p3: 'Wir binden OpenStreetMap auf unserem eigenen Server ein, sodass keine Verbindung zu Servern Dritter erfolgt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
+        s7p3:
+          'Wir binden OpenStreetMap auf unserem eigenen Server ein, sodass keine Verbindung zu Servern Dritter erfolgt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.',
         s8Title: '8. SSL-Verschlüsselung',
-        s8p1: 'Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von http:// auf https:// wechselt.',
+        s8p1:
+          'Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von http:// auf https:// wechselt.',
       },
       agb: {
         pageTitle: 'AGB | VIPSHUTTLE24 Düsseldorf',
@@ -369,7 +392,8 @@ export const translations = {
       badge: 'Premium Chauffeur Service Düsseldorf',
       headline1: 'Your journey begins',
       headline2: 'with excellence',
-      description: 'First-class chauffeur service in Düsseldorf and NRW. Discretion, punctuality and comfort at the highest level.',
+      description:
+        'First-class chauffeur service in Düsseldorf and NRW. Discretion, punctuality and comfort at the highest level.',
       cta1: 'Book now',
       cta1Label: 'Book a chauffeur now',
       cta2: 'Explore services',
@@ -439,7 +463,8 @@ export const translations = {
       sectionLabel: 'Vehicle Fleet',
       badge: 'Vehicle Fleet',
       headline: 'Exclusive Mercedes fleet for every occasion',
-      subline: 'Exclusively maintained Mercedes vehicles – sedans, vans and coaches for the highest demands on comfort and style.',
+      subline:
+        'Exclusively maintained Mercedes vehicles – sedans, vans and coaches for the highest demands on comfort and style.',
       viewLabel: 'view',
       closeLabel: 'Close',
       prevLabel: 'Previous vehicle',
@@ -451,12 +476,12 @@ export const translations = {
       stat3Value: '100%',
       stat3Label: 'Professional',
 
-      // EN
       vehicles: [
         {
           name: 'Mercedes-Benz S-Class',
           category: 'Luxury Sedan',
-          description: 'Our flagship sedan for the highest demands. Maximum comfort, cutting-edge technology and superior elegance.',
+          description:
+            'Our flagship sedan for the highest demands. Maximum comfort, cutting-edge technology and superior elegance.',
         },
         {
           name: 'Mercedes-Benz E-Class',
@@ -464,7 +489,7 @@ export const translations = {
           description: 'Elegance and comfort combined. Ideal for business trips and representative occasions.',
         },
         {
-          name: 'Mercedes-Benz V-Class',
+          name: 'Mercedes-Benz Sprinter',
           category: 'VIP Van',
           description: 'Generous space for up to 7 passengers without compromising on comfort.',
         },
@@ -476,7 +501,8 @@ export const translations = {
         {
           name: 'Mercedes-Benz Tourismo',
           category: 'Coach (black)',
-          description: 'Our black Tourismo coach for groups of up to 50 passengers. Air-conditioned, premium interior.',
+          description:
+            'Our black Tourismo coach for groups of up to 50 passengers. Air-conditioned, premium interior.',
         },
         {
           name: 'Mercedes-Benz Sprinter',
@@ -484,14 +510,15 @@ export const translations = {
           description: 'Latest Sprinter in elegant blue-grey finish for unforgettable group journeys.',
         },
       ],
-
     },
+
     gallery: {
       sectionLabel: 'VipShuttle24 Photo Gallery',
       badge: 'Gallery',
       headline1: 'Experience',
       headline2: 'our service',
       subline: 'Insights into our vehicles and unforgettable moments with VIPSHUTTLE24 in Düsseldorf and NRW.',
+      // With 45 total media items (44 images + 1 video), initial 6 => remaining 39
       showMore: (n: number) => `Show all ${n} more photos`,
       showLess: 'Show less',
       closeLabel: 'Close',
@@ -617,26 +644,33 @@ export const translations = {
         s2Phone: 'Phone',
         s2Email: 'Email',
         s3Title: 'General Disclaimer',
-        s3Text: 'No liability is accepted for completeness, editorial or technical errors, omissions or the accuracy of entries. In particular, no guarantee can be given for the completeness and accuracy of information reached via external links. Providers are responsible for their own content under general law. References via hyperlinks to third-party website content serve purely for information purposes.',
+        s3Text:
+          'No liability is accepted for completeness, editorial or technical errors, omissions or the accuracy of entries. In particular, no guarantee can be given for the completeness and accuracy of information reached via external links. Providers are responsible for their own content under general law. References via hyperlinks to third-party website content serve purely for information purposes.',
         s4Title: 'Dispute Resolution',
         s4Text: 'The European Commission provides a platform for online dispute resolution (ODR):',
-        s4Suffix: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
+        s4Suffix:
+          'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
       },
       datenschutz: {
         pageTitle: 'Privacy Policy | VIPSHUTTLE24 Düsseldorf',
         h1: 'Privacy Policy',
         s1Title: '1. Privacy at a Glance',
         s1h2: 'General Information',
-        s1p1: 'The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.',
+        s1p1:
+          'The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.',
         s1h3: 'Data Collection on this Website',
-        s1p2: 'Data processing on this website is carried out by the website operator. Your data is collected partly by you providing it to us (e.g. via a contact form). Other data is collected automatically when you visit the website by our IT systems (technical data such as internet browser, operating system or time of page access).',
+        s1p2:
+          'Data processing on this website is carried out by the website operator. Your data is collected partly by you providing it to us (e.g. via a contact form). Other data is collected automatically when you visit the website by our IT systems (technical data such as internet browser, operating system or time of page access).',
         s1h4: 'Your Rights',
-        s1p3: 'You have the right at any time to receive free information about the origin, recipient and purpose of your stored personal data, as well as the right to correction, blocking or deletion of this data. You also have the right to lodge a complaint with the competent supervisory authority.',
+        s1p3:
+          'You have the right at any time to receive free information about the origin, recipient and purpose of your stored personal data, as well as the right to correction, blocking or deletion of this data. You also have the right to lodge a complaint with the competent supervisory authority.',
         s2Title: '2. Hosting',
         s2h2: 'RAIDBOXES',
-        s2p1: 'We host the content of our website with RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. When you visit our website, RAIDBOXES collects various log files including your IP addresses. RAIDBOXES is used on the basis of Art. 6(1)(f) GDPR.',
+        s2p1:
+          'We host the content of our website with RAIDBOXES GmbH, Hafenstr. 32, 48151 Münster. When you visit our website, RAIDBOXES collects various log files including your IP addresses. RAIDBOXES is used on the basis of Art. 6(1)(f) GDPR.',
         s2h3: 'Cloudflare',
-        s2p2: 'We use the service by Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare offers a globally distributed content delivery network. Use is based on Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework (DPF).',
+        s2p2:
+          'We use the service by Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare offers a globally distributed content delivery network. Use is based on Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework (DPF).',
         s3Title: '3. Responsible Party',
         s3Name: 'Vipshuttle24',
         s3Person: 'Ahmet Bostanci',
@@ -647,25 +681,34 @@ export const translations = {
         s3Email: 'Email',
         s4Title: '4. Data Collection on this Website',
         s4h2: 'Cookies',
-        s4p1: 'Our website uses so-called cookies. Cookies are small data packages stored on your device. You can set your browser to inform you when cookies are being set.',
+        s4p1:
+          'Our website uses so-called cookies. Cookies are small data packages stored on your device. You can set your browser to inform you when cookies are being set.',
         s4h3: 'Contact Form & Email',
-        s4p2: 'If you send us enquiries via contact form or email, your details including the contact information you provide will be stored by us for the purpose of processing the request. We do not share this data without your consent. Legal basis: Art. 6(1)(b) GDPR.',
+        s4p2:
+          'If you send us enquiries via contact form or email, your details including the contact information you provide will be stored by us for the purpose of processing the request. We do not share this data without your consent. Legal basis: Art. 6(1)(b) GDPR.',
         s4h4: 'Communication via WhatsApp',
-        s4p3: 'For communication we use WhatsApp Business by WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland. Communication is end-to-end encrypted. Legal basis: Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework.',
+        s4p3:
+          'For communication we use WhatsApp Business by WhatsApp Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland. Communication is end-to-end encrypted. Legal basis: Art. 6(1)(f) GDPR. The company holds certification under the EU-US Data Privacy Framework.',
         s5Title: '5. Social Media',
-        s5p1: 'This website integrates social media elements (Facebook, Instagram). These are only used together with the Shariff solution, which prevents data from being transmitted when the page loads. A connection is only established when you actively click on the social media element (Art. 6(1)(a) GDPR).',
+        s5p1:
+          'This website integrates social media elements (Facebook, Instagram). These are only used together with the Shariff solution, which prevents data from being transmitted when the page loads. A connection is only established when you actively click on the social media element (Art. 6(1)(a) GDPR).',
         s6Title: '6. Analytics Tools',
         s6h2: 'WP Statistics',
-        s6p1: 'This website uses WP Statistics (Veronalabs, Tallinn, Estonia) for anonymised analysis of visitor access. The collected data is stored exclusively on our own server. IP addresses are anonymised. Legal basis: Art. 6(1)(f) GDPR.',
+        s6p1:
+          'This website uses WP Statistics (Veronalabs, Tallinn, Estonia) for anonymised analysis of visitor access. The collected data is stored exclusively on our own server. IP addresses are anonymised. Legal basis: Art. 6(1)(f) GDPR.',
         s7Title: '7. Plugins and Tools',
         s7h2: 'YouTube (Enhanced Privacy)',
-        s7p1: 'This website embeds videos from YouTube (Google Ireland Limited, Dublin 4, Ireland). We use enhanced privacy mode. Legal basis: Art. 6(1)(f) GDPR. Google is certified under the EU-US Data Privacy Framework.',
+        s7p1:
+          'This website embeds videos from YouTube (Google Ireland Limited, Dublin 4, Ireland). We use enhanced privacy mode. Legal basis: Art. 6(1)(f) GDPR. Google is certified under the EU-US Data Privacy Framework.',
         s7h3: 'Font Awesome',
-        s7p2: 'This site uses Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) to display icons. Legal basis: Art. 6(1)(f) GDPR.',
+        s7p2:
+          'This site uses Font Awesome (Fonticons, Inc., Cambridge, Massachusetts, USA) to display icons. Legal basis: Art. 6(1)(f) GDPR.',
         s7h4: 'OpenStreetMap',
-        s7p3: 'We embed OpenStreetMap on our own server, so no connection to third-party servers is established. Legal basis: Art. 6(1)(f) GDPR.',
+        s7p3:
+          'We embed OpenStreetMap on our own server, so no connection to third-party servers is established. Legal basis: Art. 6(1)(f) GDPR.',
         s8Title: '8. SSL Encryption',
-        s8p1: 'For security reasons, this site uses SSL or TLS encryption. You can recognise an encrypted connection by the browser address bar changing from http:// to https://.',
+        s8p1:
+          'For security reasons, this site uses SSL or TLS encryption. You can recognise an encrypted connection by the browser address bar changing from http:// to https://.',
       },
       agb: {
         pageTitle: 'T&Cs | VIPSHUTTLE24 Düsseldorf',
