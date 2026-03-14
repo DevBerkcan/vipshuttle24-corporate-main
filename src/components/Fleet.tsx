@@ -22,7 +22,7 @@ const VEHICLE_IMAGES = [
     altEn: 'Mercedes-Benz Sprinter VIP Van - VipShuttle24 Group Vehicle',
   },
   {
-    image: '/33.jpg',
+    image: '/33.JPG',
     position: 'bottom',
     altDe: 'Mercedes-Benz V-Klasse - VipShuttle24 Gruppenflotte Düsseldorf Flughafen',
     altEn: 'Mercedes-Benz V-Class - VipShuttle24 Group Fleet Düsseldorf Airport',
