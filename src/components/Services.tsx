@@ -1,18 +1,19 @@
 'use client';
 
-import { FaPlane, FaBriefcase, FaBus, FaStar, FaArrowRight, FaCar, FaGlassCheers } from 'react-icons/fa';
+import { FaShuttleVan, FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaArrowRight, FaGlassCheers } from 'react-icons/fa';
 import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
-const ICONS = [FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaGlassCheers];
+const ICONS = [FaShuttleVan, FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaGlassCheers];
 
 const IMAGES = [
-  { src: '/2.webp',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen' },
-  { src: '/38.JPG', alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom' },
+  { src: '/44.jpg',  alt: 'VipShuttle24 Mercedes-Benz Sprinter – Gruppenreisen & Transfers NRW', position: 'center 65%' },
+  { src: '/48.jpg',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen', position: 'center 65%' },
+  { src: '/38.JPG',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom' },
   { src: '/22.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
   { src: '/45.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
   { src: '/8.webp',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
-  { src: '/1.webp',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
+  { src: '/56.jpg',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
 ];
 
 const Services = () => {
@@ -91,7 +92,7 @@ const Services = () => {
                       </p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {service.features.map((feature) => (
+                      {service.features.map((feature: string) => (
                         <div key={feature} className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-silver rounded-full flex-shrink-0" />
                           <span className="text-silver/80 text-xs sm:text-sm">{feature}</span>

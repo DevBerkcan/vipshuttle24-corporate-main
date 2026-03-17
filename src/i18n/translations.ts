@@ -45,6 +45,21 @@ export const translations = {
       bottomText: 'Benötigen Sie einen individuellen Service?',
       bottomCta: 'Persönliche Beratung anfragen',
       items: [
+        // ── NEW: Mercedes-Benz Sprinter ──
+        {
+          title: 'Mercedes-Benz Sprinter',
+          subtitle: 'Komfort & Raum für Gruppen',
+          description:
+            'Reisen Sie komfortabel mit unserem modernen Mercedes-Benz Sprinter – ideal für Gruppenreisen, Flughafentransfers und Firmenevents. Großzügiger Innenraum, klimatisiert und professionell gefahren.',
+          features: [
+            'Bis zu 8 Personen',
+            'Großes Gepäckvolumen',
+            'Klimaanlage & WLAN',
+            'Professioneller Chauffeur',
+            'Flughafentransfer',
+            'Firmen- & Gruppenreisen',
+          ],
+        },
         {
           title: 'Airport Transfer',
           subtitle: 'Pünktlich und stressfrei',
@@ -105,7 +120,6 @@ export const translations = {
       stat2Label: 'Diskretion',
       stat3Value: '100%',
       stat3Label: 'Professionell',
-
       vehicles: [
         {
           name: 'Mercedes-Benz S-Klasse',
@@ -140,14 +154,12 @@ export const translations = {
         },
       ],
     },
-
     gallery: {
       sectionLabel: 'Bildergalerie VipShuttle24',
       badge: 'Galerie',
       headline1: 'Erleben Sie',
       headline2: 'unseren Service',
       subline: 'Einblicke in unsere Fahrzeuge und unvergessliche Momente mit VIPSHUTTLE24 in Düsseldorf und NRW.',
-      // With 45 total media items (44 images + 1 video), initial 6 => remaining 39
       showMore: (n: number) => `Alle ${n} weiteren Fotos anzeigen`,
       showLess: 'Weniger anzeigen',
       closeLabel: 'Schließen',
@@ -158,7 +170,6 @@ export const translations = {
       playLabel: 'Video abspielen / pausieren',
       muteLabel: 'Ton an/aus',
     },
-
     booking: {
       sectionLabel: 'Buchungsanfrage',
       badge: 'Buchungsanfrage',
@@ -198,6 +209,7 @@ export const translations = {
         service: 'Gewünschter Service',
         servicePlaceholder: 'Bitte wählen',
         serviceOptions: {
+          sprinter: 'Mercedes-Benz Sprinter',
           airport: 'Airport Transfer',
           business: 'Business & Events',
           vip: 'VIP & Chauffeur Service',
@@ -415,6 +427,21 @@ export const translations = {
       bottomText: 'Need a custom service?',
       bottomCta: 'Request personal consultation',
       items: [
+        // ── NEW: Mercedes-Benz Sprinter ──
+        {
+          title: 'Mercedes-Benz Sprinter',
+          subtitle: 'Comfort & space for groups',
+          description:
+            'Travel in comfort with our modern Mercedes-Benz Sprinter – ideal for group trips, airport transfers and corporate events. Spacious interior, air-conditioned and professionally driven.',
+          features: [
+            'Up to 8 passengers',
+            'Large luggage capacity',
+            'Air conditioning & Wi-Fi',
+            'Professional chauffeur',
+            'Airport transfers',
+            'Corporate & group travel',
+          ],
+        },
         {
           title: 'Airport Transfer',
           subtitle: 'Punctual and stress-free',
@@ -475,7 +502,6 @@ export const translations = {
       stat2Label: 'Discretion',
       stat3Value: '100%',
       stat3Label: 'Professional',
-
       vehicles: [
         {
           name: 'Mercedes-Benz S-Class',
@@ -494,7 +520,7 @@ export const translations = {
           description: 'Generous space for up to 7 passengers without compromising on comfort.',
         },
         {
-          name: 'Mercedes-Benz  V-Class',
+          name: 'Mercedes-Benz V-Class',
           category: 'Airport Fleet',
           description: 'V-Class - perfect coordination for group transfers at the airport.',
         },
@@ -511,14 +537,12 @@ export const translations = {
         },
       ],
     },
-
     gallery: {
       sectionLabel: 'VipShuttle24 Photo Gallery',
       badge: 'Gallery',
       headline1: 'Experience',
       headline2: 'our service',
       subline: 'Insights into our vehicles and unforgettable moments with VIPSHUTTLE24 in Düsseldorf and NRW.',
-      // With 45 total media items (44 images + 1 video), initial 6 => remaining 39
       showMore: (n: number) => `Show all ${n} more photos`,
       showLess: 'Show less',
       closeLabel: 'Close',
@@ -529,7 +553,6 @@ export const translations = {
       playLabel: 'Play / pause video',
       muteLabel: 'Toggle mute',
     },
-
     booking: {
       sectionLabel: 'Booking Request',
       badge: 'Booking Request',
@@ -569,6 +592,7 @@ export const translations = {
         service: 'Requested service',
         servicePlaceholder: 'Please select',
         serviceOptions: {
+          sprinter: 'Mercedes-Benz Sprinter',
           airport: 'Airport Transfer',
           business: 'Business & Events',
           vip: 'VIP & Chauffeur Service',

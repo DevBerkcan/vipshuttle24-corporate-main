@@ -16,216 +16,144 @@ import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
 const IMAGE_ALTS_DE = [
-  // 1
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, Luxusfahrzeug Innenraum',
-  // 2
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes am Flughafen',
-  // 3
   'VipShuttle24 – Hochzeitsfahrt NRW, geschmücktes Brautauto',
-  // 4
   'VipShuttle24 – Corporate Roadshow NRW, Business Limousine',
-  // 5
   'VipShuttle24 – Mercedes S-Klasse, Luxus-Limousine Düsseldorf',
-  // 6
   'VipShuttle24 – Premium Fahrzeugflotte, exklusive Limousine',
-  // 7
   'VipShuttle24 – Mercedes E-Klasse, Business-Limousine NRW',
-  // 8
   'VipShuttle24 – Mercedes V-Klasse VIP-Van, Gruppenfahrzeug',
-  // 9
   'VipShuttle24 – Chauffeur Service Düsseldorf, eleganter Transfer',
-  // 10
   'VipShuttle24 – Stundenweise Buchung, Limousine mit Fahrer',
-  // 11
   'VipShuttle24 – Mercedes Sprinter, Gruppenbus Düsseldorf',
-  // 12
   'VipShuttle24 – VIP-Service NRW, Luxusfahrzeug Außenansicht',
-  // 13
   'VipShuttle24 – Premium Chauffeur, gepflegter Mercedes Innenraum',
-  // 14
   'VipShuttle24 – Flughafentransfer Köln, professioneller Fahrer',
-  // 15
   'VipShuttle24 – Abendveranstaltung Transfer, elegante Fahrt',
-  // 16
   'VipShuttle24 – Messe Shuttle Düsseldorf, Geschäftsreise NRW',
-  // 17
   'VipShuttle24 – Luxus Limousinenservice, schwarzer Mercedes',
-  // 18
   'VipShuttle24 – Nachtfahrt Düsseldorf, stilvoller City Transfer',
-  // 19
   'VipShuttle24 – Premium Transfer NRW, Chauffeur mit Fahrgast',
-  // 20
   'VipShuttle24 – Mercedes S-Klasse Exterieur, Premium Limousine Düsseldorf',
-  // 21
   'VipShuttle24 – VIP Chauffeur Service, exklusiver Fahrgastraum',
-  // 22
   'VipShuttle24 – Business Transfer NRW, professioneller Fahrservice',
-  // 23
   'VipShuttle24 – Flughafentransfer Düsseldorf, pünktlicher Abholdienst',
-  // 24
   'VipShuttle24 – Luxusfahrzeug Detailansicht, premium Ausstattung',
-  // 25
   'VipShuttle24 – Mercedes V-Klasse Innenraum, VIP Gruppenfahrzeug NRW',
-  // 26
   'VipShuttle24 – Hochzeitsfahrt Düsseldorf, elegante Brautwagenfahrt',
-
-  // 28
   'VipShuttle24 – Geschäftsreise Limousine, Corporate Transfer NRW',
-  // 29
   'VipShuttle24 – Premium Fahrdienst, schwarzer Mercedes Exterieur',
-
-  // 32
   'VipShuttle24 – Chauffeur Düsseldorf, stilvoller Abendtransfer',
-  // 33
   'VipShuttle24 – VIP Transfer Düsseldorf, exklusive Fahrzeugflotte',
-  // 34
   'VipShuttle24 – Mercedes E-Klasse Innenraum, Business Ambiente',
-  // 35
   'VipShuttle24 – Nacht Transfer NRW, Premium Limousinenservice',
-  // 36
   'VipShuttle24 – Messe Düsseldorf Transfer, professioneller Shuttle',
-  // 37
   'VipShuttle24 – Flughafen Meet and Greet, VIP Empfangsservice',
-  // 38
   'VipShuttle24 – Hochzeitsfahrzeug NRW, geschmückter Luxus-Mercedes',
-  // 39
   'VipShuttle24 – Premium Chauffeur Köln, eleganter Fahrdienst',
-  // 40
   'VipShuttle24 – Corporate Roadshow Limousine, Geschäftsreise Service',
-  // 41
   'VipShuttle24 – Luxus Innenraum Detail, erstklassige Ausstattung',
-
-  // 42
   'VipShuttle24 – VIP Gruppenfahrt NRW, Premium Transfer für Gruppen',
-  // 43
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, neues Galerie-Foto',
-  // 44
   'VipShuttle24 – Luxus Limousinenservice Düsseldorf, neues Galerie-Foto',
-  // 45
   'VipShuttle24 – Premium Chauffeur Service NRW, neues Galerie-Foto',
+  // 46–57
+  'VipShuttle24 – Mercedes S-Klasse Medienhafen Düsseldorf, Premium Chauffeur',
+  'VipShuttle24 – Luxusfahrzeug Düsseldorf, exklusiver Chauffeur Service',
+  'VipShuttle24 – Premium Transfer Düsseldorf, elegante Limousine',
+  'VipShuttle24 – VIP Chauffeur NRW, schwarzer Mercedes Exterieur',
+  'VipShuttle24 – Business Limousine Düsseldorf, professioneller Fahrservice',
+  'VipShuttle24 – Exklusiver Fahrdienst NRW, Premium Mercedes',
+  'VipShuttle24 – Chauffeur Service NRW, stilvoller Luxustransfer',
+  'VipShuttle24 – Premium Fahrzeug Düsseldorf, VIP Limousinenservice',
+  'VipShuttle24 – Luxus Chauffeur Düsseldorf, erstklassiger Transfer',
+  'VipShuttle24 – VIP Transfer NRW, exklusiver Mercedes Service',
+  'VipShuttle24 – Premium Limousinenservice Düsseldorf, eleganter Fahrdienst',
+  'VipShuttle24 – Exklusiver Chauffeur NRW, Premium Transfer Service',
 ];
 
 const IMAGE_ALTS_EN = [
-  // 1
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, luxury vehicle interior',
-  // 2
   'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes at the airport',
-  // 3
   'VipShuttle24 – Wedding Ride NRW, decorated bridal car',
-  // 4
   'VipShuttle24 – Corporate Roadshow NRW, business limousine',
-  // 5
   'VipShuttle24 – Mercedes S-Class, luxury sedan Düsseldorf',
-  // 6
   'VipShuttle24 – Premium fleet, exclusive limousine',
-  // 7
   'VipShuttle24 – Mercedes E-Class, business sedan NRW',
-  // 8
   'VipShuttle24 – Mercedes V-Class VIP van, group vehicle',
-  // 9
   'VipShuttle24 – Chauffeur Service Düsseldorf, elegant transfer',
-  // 10
   'VipShuttle24 – Hourly booking, limousine with driver',
-  // 11
   'VipShuttle24 – Mercedes Sprinter, group bus Düsseldorf',
-  // 12
   'VipShuttle24 – VIP Service NRW, luxury vehicle exterior',
-  // 13
   'VipShuttle24 – Premium chauffeur, maintained Mercedes interior',
-  // 14
   'VipShuttle24 – Airport transfer Cologne, professional driver',
-  // 15
   'VipShuttle24 – Evening event transfer, elegant ride',
-  // 16
   'VipShuttle24 – Trade fair shuttle Düsseldorf, business trip NRW',
-  // 17
   'VipShuttle24 – Luxury limousine service, black Mercedes',
-  // 18
   'VipShuttle24 – Night ride Düsseldorf, stylish city transfer',
-  // 19
   'VipShuttle24 – Premium transfer NRW, chauffeur with passenger',
-  // 20
   'VipShuttle24 – Mercedes S-Class exterior, premium sedan Düsseldorf',
-  // 21
   'VipShuttle24 – VIP chauffeur service, exclusive passenger cabin',
-  // 22
   'VipShuttle24 – Business transfer NRW, professional driving service',
-  // 23
   'VipShuttle24 – Airport transfer Düsseldorf, punctual pick-up service',
-  // 24
   'VipShuttle24 – Luxury vehicle detail view, premium interior',
-  // 25
   'VipShuttle24 – Mercedes V-Class interior, VIP group vehicle NRW',
-  // 26
   'VipShuttle24 – Wedding ride Düsseldorf, elegant bridal car journey',
-
-  // 28
   'VipShuttle24 – Business trip limousine, corporate transfer NRW',
-  // 29
   'VipShuttle24 – Premium driving service, black Mercedes exterior',
-
-  // 32
   'VipShuttle24 – Chauffeur Düsseldorf, stylish evening transfer',
-  // 33
   'VipShuttle24 – VIP transfer Düsseldorf, exclusive vehicle fleet',
-  // 34
   'VipShuttle24 – Mercedes E-Class interior, business ambience',
-  // 35
   'VipShuttle24 – Night transfer NRW, premium limousine service',
-  // 36
   'VipShuttle24 – Trade fair Düsseldorf transfer, professional shuttle',
-  // 37
   'VipShuttle24 – Airport meet and greet, VIP reception service',
-  // 38
   'VipShuttle24 – Wedding vehicle NRW, decorated luxury Mercedes',
-  // 39
   'VipShuttle24 – Premium chauffeur Cologne, elegant driving service',
-  // 40
   'VipShuttle24 – Corporate roadshow limousine, business travel service',
-  // 41
   'VipShuttle24 – Luxury interior detail, first-class fittings',
-
-  // 42
   'VipShuttle24 – VIP group ride NRW, premium group transfer',
-  // 43
   'VipShuttle24 – Premium Chauffeur Service Düsseldorf, new gallery photo',
-  // 44
   'VipShuttle24 – Luxury limousine service Düsseldorf, new gallery photo',
-  // 45
   'VipShuttle24 – Premium Chauffeur Service NRW, new gallery photo',
+  // 46–57
+  'VipShuttle24 – Mercedes S-Class Medienhafen Düsseldorf, premium chauffeur',
+  'VipShuttle24 – Luxury vehicle Düsseldorf, exclusive chauffeur service',
+  'VipShuttle24 – Premium transfer Düsseldorf, elegant limousine',
+  'VipShuttle24 – VIP chauffeur NRW, black Mercedes exterior',
+  'VipShuttle24 – Business limousine Düsseldorf, professional driving service',
+  'VipShuttle24 – Exclusive driving service NRW, premium Mercedes',
+  'VipShuttle24 – Chauffeur service NRW, stylish luxury transfer',
+  'VipShuttle24 – Premium vehicle Düsseldorf, VIP limousine service',
+  'VipShuttle24 – Luxury chauffeur Düsseldorf, first-class transfer',
+  'VipShuttle24 – VIP transfer NRW, exclusive Mercedes service',
+  'VipShuttle24 – Premium limousine service Düsseldorf, elegant driving',
+  'VipShuttle24 – Exclusive chauffeur NRW, premium transfer service',
 ];
 
 type MediaItem =
   | { type: 'image'; src: string; alt: string }
   | { type: 'video'; src: string; alt: string };
 
-/**
- * Only include files that exist.
- * Removed: 27, 30, 31
- * Added: 42, 43, 44, 45
- */
 const IMAGE_FILES: string[] = [
-  // 1-19
+  // 1–19
   ...Array.from({ length: 19 }, (_, i) => `${i + 1}.webp`),
-
   // 20
   '20.jpeg',
-
-  // 21-26
+  // 21–26
   ...Array.from({ length: 6 }, (_, i) => `${21 + i}.jpg`),
-
-  // 28-29 (27 removed)
+  // 28–29 (27 removed)
   '28.jpg',
   '29.jpg',
-
-  // 32-41 (30/31 removed)
+  // 32–41 (30/31 removed)
   ...Array.from({ length: 10 }, (_, i) => `${32 + i}.JPG`),
-
-  // 42-45 (assumed .jpg)
+  // 42–45
   '42.jpg',
   '43.jpg',
   '44.jpg',
   '45.jpg',
+  // 46–57 (NEW)
+  ...Array.from({ length: 12 }, (_, i) => `${46 + i}.jpg`),
 ];
 
 const buildMedia = (alts: string[], lang: 'de' | 'en'): MediaItem[] => {
@@ -242,10 +170,10 @@ const buildMedia = (alts: string[], lang: 'de' | 'en'): MediaItem[] => {
 
   const video: MediaItem = { type: 'video', src: '/video_1.mp4', alt: videoAlt };
 
-  // Keep video as 2nd item (after first image)
   return [images[0], video, ...images.slice(1)];
 };
 
+// ── Video thumbnail ──────────────────────────────────────────────────────────
 const VideoThumbnail = ({ onClick, label }: { onClick: () => void; label: string }) => (
   <div
     className="group relative overflow-hidden rounded-lg glass-card cursor-pointer"
@@ -256,8 +184,14 @@ const VideoThumbnail = ({ onClick, label }: { onClick: () => void; label: string
     aria-label={label}
     onKeyDown={(e) => e.key === 'Enter' && onClick()}
   >
-    <video src="/video_1.mp4" className="w-full h-full object-cover" muted playsInline preload="metadata" />
-    <div className="absolute inset-0 bg-midnight/50 flex items-center justify-center transition-colors duration-300 group-hover:bg-midnight/30">
+    {/*
+      FIX: Vercel / production video issue.
+      - Removed <video> thumbnail preview — Vercel's CDN serves .mp4 without
+        the byte-range headers needed for <video> preload/poster on cold load.
+      - Replaced with a static placeholder so the thumbnail always renders.
+      - The actual video only loads inside the lightbox on user click.
+    */}
+    <div className="w-full h-full bg-gradient-to-br from-midnight to-silver/10 flex items-center justify-center">
       <div className="w-14 h-14 glass-card rounded-full flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
         <FaPlay className="text-silver text-xl ml-1" aria-hidden="true" />
       </div>
@@ -265,9 +199,10 @@ const VideoThumbnail = ({ onClick, label }: { onClick: () => void; label: string
   </div>
 );
 
+// ── Lightbox video ───────────────────────────────────────────────────────────
 const LightboxVideo = ({ src }: { src: string }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false); // FIX: start as false, wait for canplay
   const [muted, setMuted] = useState(false);
 
   const togglePlay = (e: React.MouseEvent) => {
@@ -295,10 +230,25 @@ const LightboxVideo = ({ src }: { src: string }) => {
         ref={videoRef}
         src={src}
         className="max-w-full max-h-full rounded-lg object-contain"
-        autoPlay
+        /*
+          FIX: Do NOT use autoPlay on Vercel — browsers block autoplay unless
+          muted, and Vercel's CDN may not support byte-range requests needed
+          for seamless autoplay. Instead we use onCanPlay to start playback
+          once the browser signals it has enough data.
+        */
+        autoPlay={false}
         playsInline
+        muted={false}
+        preload="auto"
         controls={false}
         style={{ maxHeight: '78vh' }}
+        onCanPlay={() => {
+          if (videoRef.current && videoRef.current.paused) {
+            videoRef.current.play().then(() => setPlaying(true)).catch(() => {});
+          }
+        }}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
       />
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 z-10">
         <button
@@ -320,6 +270,7 @@ const LightboxVideo = ({ src }: { src: string }) => {
   );
 };
 
+// ── Main Gallery ─────────────────────────────────────────────────────────────
 const Gallery = () => {
   const { t, lang } = useLang();
   const g = t.gallery;
@@ -334,18 +285,12 @@ const Gallery = () => {
   const remaining = media.length - INITIAL_COUNT;
 
   const handlePrev = useCallback(
-    () =>
-      setSelectedIndex((prev) =>
-        prev !== null ? (prev > 0 ? prev - 1 : media.length - 1) : null,
-      ),
+    () => setSelectedIndex((prev) => (prev !== null ? (prev > 0 ? prev - 1 : media.length - 1) : null)),
     [media.length],
   );
 
   const handleNext = useCallback(
-    () =>
-      setSelectedIndex((prev) =>
-        prev !== null ? (prev < media.length - 1 ? prev + 1 : 0) : null,
-      ),
+    () => setSelectedIndex((prev) => (prev !== null ? (prev < media.length - 1 ? prev + 1 : 0) : null)),
     [media.length],
   );
 
@@ -382,9 +327,7 @@ const Gallery = () => {
               item.type === 'video' ? (
                 <div
                   key="video_1"
-                  style={{
-                    animation: `fadeInGallery 0.4s ease-out ${Math.min(index, 5) * 0.06}s both`,
-                  }}
+                  style={{ animation: `fadeInGallery 0.4s ease-out ${Math.min(index, 5) * 0.06}s both` }}
                 >
                   <VideoThumbnail onClick={() => setSelectedIndex(index)} label={`${g.openLabel}: ${item.alt}`} />
                 </div>
@@ -435,10 +378,7 @@ const Gallery = () => {
                 ) : (
                   <>
                     {g.showMore(remaining)}
-                    <FaChevronDown
-                      className="transition-transform duration-300 group-hover:translate-y-0.5"
-                      aria-hidden="true"
-                    />
+                    <FaChevronDown className="transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden="true" />
                   </>
                 )}
               </button>
@@ -470,10 +410,7 @@ const Gallery = () => {
           </div>
 
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handlePrev();
-            }}
+            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
             className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300 z-10"
             aria-label={g.prevLabel}
           >
@@ -481,10 +418,7 @@ const Gallery = () => {
           </button>
 
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleNext();
-            }}
+            onClick={(e) => { e.stopPropagation(); handleNext(); }}
             className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-full flex items-center justify-center hover:shadow-glow transition-all duration-300 z-10"
             aria-label={g.nextLabel}
           >
@@ -515,14 +449,8 @@ const Gallery = () => {
 
       <style jsx>{`
         @keyframes fadeInGallery {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </>
