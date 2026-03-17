@@ -48,12 +48,38 @@ const nextConfig = {
           },
         ],
       },
+      // Video: byte-range + correct MIME + caching (fixes Vercel streaming)
       {
-        source: '/(.+\\.mp4|.+\\.webm)',
+        source: '/:path*.mp4',
         headers: [
           {
+            key: 'Accept-Ranges',
+            value: 'bytes',
+          },
+          {
+            key: 'Content-Type',
+            value: 'video/mp4',
+          },
+          {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=31536000',
+          },
+        ],
+      },
+      {
+        source: '/:path*.webm',
+        headers: [
+          {
+            key: 'Accept-Ranges',
+            value: 'bytes',
+          },
+          {
+            key: 'Content-Type',
+            value: 'video/webm',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000',
           },
         ],
       },
