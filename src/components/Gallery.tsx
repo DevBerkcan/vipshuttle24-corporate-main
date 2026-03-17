@@ -163,14 +163,8 @@ const buildMedia = (alts: string[], lang: 'de' | 'en'): MediaItem[] => {
     alt: alts[i] ?? `VipShuttle24 – Gallery image ${i + 1}`,
   }));
 
-  const videoAlt =
-    lang === 'de'
-      ? 'VipShuttle24 – Premium Chauffeur Service Video, Düsseldorf NRW'
-      : 'VipShuttle24 – Premium Chauffeur Service Video, Düsseldorf NRW';
 
-  const video: MediaItem = { type: 'video', src: '/video_1.mp4', alt: videoAlt };
-
-  return [images[0], video, ...images.slice(1)];
+  return [images[0], ...images.slice(1)];
 };
 
 // ── Video thumbnail ──────────────────────────────────────────────────────────
