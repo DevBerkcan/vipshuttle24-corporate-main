@@ -13,7 +13,7 @@ const IMAGES = [
   { src: '/22.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
   { src: '/45.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
   { src: '/8.webp',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
-  { src: '/56.jpg',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
+  { src: '/33.JPG',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
 ];
 
 const Services = () => {
