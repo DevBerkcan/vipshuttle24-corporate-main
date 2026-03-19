@@ -16,144 +16,137 @@ import Image from 'next/image';
 import { useLang } from '@/i18n/LangContext';
 
 const IMAGE_ALTS_DE = [
-  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, Luxusfahrzeug Innenraum',
-  'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes am Flughafen',
-  'VipShuttle24 – Hochzeitsfahrt NRW, geschmücktes Brautauto',
-  'VipShuttle24 – Corporate Roadshow NRW, Business Limousine',
-  'VipShuttle24 – Mercedes S-Klasse, Luxus-Limousine Düsseldorf',
-  'VipShuttle24 – Premium Fahrzeugflotte, exklusive Limousine',
-  'VipShuttle24 – Mercedes E-Klasse, Business-Limousine NRW',
-  'VipShuttle24 – Mercedes V-Klasse VIP-Van, Gruppenfahrzeug',
-  'VipShuttle24 – Chauffeur Service Düsseldorf, eleganter Transfer',
-  'VipShuttle24 – Stundenweise Buchung, Limousine mit Fahrer',
-  'VipShuttle24 – Mercedes Sprinter, Gruppenbus Düsseldorf',
-  'VipShuttle24 – VIP-Service NRW, Luxusfahrzeug Außenansicht',
-  'VipShuttle24 – Premium Chauffeur, gepflegter Mercedes Innenraum',
-  'VipShuttle24 – Flughafentransfer Köln, professioneller Fahrer',
-  'VipShuttle24 – Abendveranstaltung Transfer, elegante Fahrt',
-  'VipShuttle24 – Messe Shuttle Düsseldorf, Geschäftsreise NRW',
-  'VipShuttle24 – Luxus Limousinenservice, schwarzer Mercedes',
-  'VipShuttle24 – Nachtfahrt Düsseldorf, stilvoller City Transfer',
-  'VipShuttle24 – Premium Transfer NRW, Chauffeur mit Fahrgast',
-  'VipShuttle24 – Mercedes S-Klasse Exterieur, Premium Limousine Düsseldorf',
-  'VipShuttle24 – VIP Chauffeur Service, exklusiver Fahrgastraum',
-  'VipShuttle24 – Business Transfer NRW, professioneller Fahrservice',
-  'VipShuttle24 – Flughafentransfer Düsseldorf, pünktlicher Abholdienst',
-  'VipShuttle24 – Luxusfahrzeug Detailansicht, premium Ausstattung',
-  'VipShuttle24 – Mercedes V-Klasse Innenraum, VIP Gruppenfahrzeug NRW',
-  'VipShuttle24 – Hochzeitsfahrt Düsseldorf, elegante Brautwagenfahrt',
-  'VipShuttle24 – Geschäftsreise Limousine, Corporate Transfer NRW',
-  'VipShuttle24 – Premium Fahrdienst, schwarzer Mercedes Exterieur',
-  'VipShuttle24 – Chauffeur Düsseldorf, stilvoller Abendtransfer',
-  'VipShuttle24 – VIP Transfer Düsseldorf, exklusive Fahrzeugflotte',
-  'VipShuttle24 – Mercedes E-Klasse Innenraum, Business Ambiente',
-  'VipShuttle24 – Nacht Transfer NRW, Premium Limousinenservice',
-  'VipShuttle24 – Messe Düsseldorf Transfer, professioneller Shuttle',
-  'VipShuttle24 – Flughafen Meet and Greet, VIP Empfangsservice',
-  'VipShuttle24 – Hochzeitsfahrzeug NRW, geschmückter Luxus-Mercedes',
-  'VipShuttle24 – Premium Chauffeur Köln, eleganter Fahrdienst',
-  'VipShuttle24 – Corporate Roadshow Limousine, Geschäftsreise Service',
-  'VipShuttle24 – Luxus Innenraum Detail, erstklassige Ausstattung',
-  'VipShuttle24 – VIP Gruppenfahrt NRW, Premium Transfer für Gruppen',
-  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, neues Galerie-Foto',
-  'VipShuttle24 – Luxus Limousinenservice Düsseldorf, neues Galerie-Foto',
-  'VipShuttle24 – Premium Chauffeur Service NRW, neues Galerie-Foto',
-  // 46–57
-  'VipShuttle24 – Mercedes S-Klasse Medienhafen Düsseldorf, Premium Chauffeur',
-  'VipShuttle24 – Luxusfahrzeug Düsseldorf, exklusiver Chauffeur Service',
-  'VipShuttle24 – Premium Transfer Düsseldorf, elegante Limousine',
-  'VipShuttle24 – VIP Chauffeur NRW, schwarzer Mercedes Exterieur',
-  'VipShuttle24 – Business Limousine Düsseldorf, professioneller Fahrservice',
-  'VipShuttle24 – Exklusiver Fahrdienst NRW, Premium Mercedes',
-  'VipShuttle24 – Chauffeur Service NRW, stilvoller Luxustransfer',
-  'VipShuttle24 – Premium Fahrzeug Düsseldorf, VIP Limousinenservice',
-  'VipShuttle24 – Luxus Chauffeur Düsseldorf, erstklassiger Transfer',
-  'VipShuttle24 – VIP Transfer NRW, exklusiver Mercedes Service',
-  'VipShuttle24 – Premium Limousinenservice Düsseldorf, eleganter Fahrdienst',
-  'VipShuttle24 – Exklusiver Chauffeur NRW, Premium Transfer Service',
+  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, Luxusfahrzeug Innenraum',        // 1
+  'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes am Flughafen',                   // 2
+  'VipShuttle24 – Hochzeitsfahrt NRW, geschmücktes Brautauto',                           // 3
+  'VipShuttle24 – Corporate Roadshow NRW, Business Limousine',                           // 4
+  'VipShuttle24 – Mercedes S-Klasse, Luxus-Limousine Düsseldorf',                        // 5
+  'VipShuttle24 – Mercedes E-Klasse, Business-Limousine NRW',                            // 7
+  'VipShuttle24 – Mercedes V-Klasse VIP-Van, Gruppenfahrzeug',                           // 8
+  'VipShuttle24 – Chauffeur Service Düsseldorf, eleganter Transfer',                     // 9
+  'VipShuttle24 – Stundenweise Buchung, Limousine mit Fahrer',                           // 10
+  'VipShuttle24 – VIP-Service NRW, Luxusfahrzeug Außenansicht',                          // 12
+  'VipShuttle24 – Premium Chauffeur, gepflegter Mercedes Innenraum',                     // 13
+  'VipShuttle24 – Flughafentransfer Köln, professioneller Fahrer',                       // 14
+  'VipShuttle24 – Luxus Limousinenservice, schwarzer Mercedes',                          // 17
+  'VipShuttle24 – Nachtfahrt Düsseldorf, stilvoller City Transfer',                      // 18
+  'VipShuttle24 – Premium Transfer NRW, Chauffeur mit Fahrgast',                         // 19
+  'VipShuttle24 – Mercedes S-Klasse Exterieur, Premium Limousine Düsseldorf',            // 20
+  'VipShuttle24 – VIP Chauffeur Service, exklusiver Fahrgastraum',                       // 21
+  'VipShuttle24 – Business Transfer NRW, professioneller Fahrservice',                   // 22
+  'VipShuttle24 – Flughafentransfer Düsseldorf, pünktlicher Abholdienst',                // 23
+  'VipShuttle24 – Luxusfahrzeug Detailansicht, premium Ausstattung',                     // 24
+  'VipShuttle24 – Mercedes V-Klasse Innenraum, VIP Gruppenfahrzeug NRW',                 // 25
+  'VipShuttle24 – Hochzeitsfahrt Düsseldorf, elegante Brautwagenfahrt',                  // 26
+  'VipShuttle24 – Premium Fahrdienst, schwarzer Mercedes Exterieur',                     // 28
+  'VipShuttle24 – Chauffeur Düsseldorf, stilvoller Abendtransfer',                       // 29
+  'VipShuttle24 – Messe Düsseldorf Transfer, professioneller Shuttle',                   // 33
+  'VipShuttle24 – Flughafen Meet and Greet, VIP Empfangsservice',                        // 34
+  'VipShuttle24 – Corporate Roadshow Limousine, Geschäftsreise Service',                 // 37
+  'VipShuttle24 – Luxus Innenraum Detail, erstklassige Ausstattung',                     // 38
+  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, neues Galerie-Foto',             // 41
+  'VipShuttle24 – Premium Chauffeur Service NRW, neues Galerie-Foto',                    // 43
+  'VipShuttle24 – Mercedes S-Klasse Medienhafen Düsseldorf, Premium Chauffeur',          // 44
+  'VipShuttle24 – Luxusfahrzeug Düsseldorf, exklusiver Chauffeur Service',               // 45
+  'VipShuttle24 – VIP Chauffeur NRW, schwarzer Mercedes Exterieur',                      // 47
+  'VipShuttle24 – Exklusiver Fahrdienst NRW, Premium Mercedes',                          // 49
+  'VipShuttle24 – Chauffeur Service NRW, stilvoller Luxustransfer',                      // 50
+  'VipShuttle24 – Premium Fahrzeug Düsseldorf, VIP Limousinenservice',                   // 51
+  'VipShuttle24 – Luxus Chauffeur Düsseldorf, erstklassiger Transfer',                   // 52
+  'VipShuttle24 – VIP Transfer NRW, exklusiver Mercedes Service',                        // 53
+  'VipShuttle24 – Premium Limousinenservice Düsseldorf, eleganter Fahrdienst',           // 55
+  'VipShuttle24 – Exklusiver Chauffeur NRW, Premium Transfer Service',                   // 56
 ];
 
 const IMAGE_ALTS_EN = [
-  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, luxury vehicle interior',
-  'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes at the airport',
-  'VipShuttle24 – Wedding Ride NRW, decorated bridal car',
-  'VipShuttle24 – Corporate Roadshow NRW, business limousine',
-  'VipShuttle24 – Mercedes S-Class, luxury sedan Düsseldorf',
-  'VipShuttle24 – Premium fleet, exclusive limousine',
-  'VipShuttle24 – Mercedes E-Class, business sedan NRW',
-  'VipShuttle24 – Mercedes V-Class VIP van, group vehicle',
-  'VipShuttle24 – Chauffeur Service Düsseldorf, elegant transfer',
-  'VipShuttle24 – Hourly booking, limousine with driver',
-  'VipShuttle24 – Mercedes Sprinter, group bus Düsseldorf',
-  'VipShuttle24 – VIP Service NRW, luxury vehicle exterior',
-  'VipShuttle24 – Premium chauffeur, maintained Mercedes interior',
-  'VipShuttle24 – Airport transfer Cologne, professional driver',
-  'VipShuttle24 – Evening event transfer, elegant ride',
-  'VipShuttle24 – Trade fair shuttle Düsseldorf, business trip NRW',
-  'VipShuttle24 – Luxury limousine service, black Mercedes',
-  'VipShuttle24 – Night ride Düsseldorf, stylish city transfer',
-  'VipShuttle24 – Premium transfer NRW, chauffeur with passenger',
-  'VipShuttle24 – Mercedes S-Class exterior, premium sedan Düsseldorf',
-  'VipShuttle24 – VIP chauffeur service, exclusive passenger cabin',
-  'VipShuttle24 – Business transfer NRW, professional driving service',
-  'VipShuttle24 – Airport transfer Düsseldorf, punctual pick-up service',
-  'VipShuttle24 – Luxury vehicle detail view, premium interior',
-  'VipShuttle24 – Mercedes V-Class interior, VIP group vehicle NRW',
-  'VipShuttle24 – Wedding ride Düsseldorf, elegant bridal car journey',
-  'VipShuttle24 – Business trip limousine, corporate transfer NRW',
-  'VipShuttle24 – Premium driving service, black Mercedes exterior',
-  'VipShuttle24 – Chauffeur Düsseldorf, stylish evening transfer',
-  'VipShuttle24 – VIP transfer Düsseldorf, exclusive vehicle fleet',
-  'VipShuttle24 – Mercedes E-Class interior, business ambience',
-  'VipShuttle24 – Night transfer NRW, premium limousine service',
-  'VipShuttle24 – Trade fair Düsseldorf transfer, professional shuttle',
-  'VipShuttle24 – Airport meet and greet, VIP reception service',
-  'VipShuttle24 – Wedding vehicle NRW, decorated luxury Mercedes',
-  'VipShuttle24 – Premium chauffeur Cologne, elegant driving service',
-  'VipShuttle24 – Corporate roadshow limousine, business travel service',
-  'VipShuttle24 – Luxury interior detail, first-class fittings',
-  'VipShuttle24 – VIP group ride NRW, premium group transfer',
-  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, new gallery photo',
-  'VipShuttle24 – Luxury limousine service Düsseldorf, new gallery photo',
-  'VipShuttle24 – Premium Chauffeur Service NRW, new gallery photo',
-  // 46–57
-  'VipShuttle24 – Mercedes S-Class Medienhafen Düsseldorf, premium chauffeur',
-  'VipShuttle24 – Luxury vehicle Düsseldorf, exclusive chauffeur service',
-  'VipShuttle24 – Premium transfer Düsseldorf, elegant limousine',
-  'VipShuttle24 – VIP chauffeur NRW, black Mercedes exterior',
-  'VipShuttle24 – Business limousine Düsseldorf, professional driving service',
-  'VipShuttle24 – Exclusive driving service NRW, premium Mercedes',
-  'VipShuttle24 – Chauffeur service NRW, stylish luxury transfer',
-  'VipShuttle24 – Premium vehicle Düsseldorf, VIP limousine service',
-  'VipShuttle24 – Luxury chauffeur Düsseldorf, first-class transfer',
-  'VipShuttle24 – VIP transfer NRW, exclusive Mercedes service',
-  'VipShuttle24 – Premium limousine service Düsseldorf, elegant driving',
-  'VipShuttle24 – Exclusive chauffeur NRW, premium transfer service',
+  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, luxury vehicle interior',        // 1
+  'VipShuttle24 – Airport Transfer Düsseldorf, Mercedes at the airport',                 // 2
+  'VipShuttle24 – Wedding Ride NRW, decorated bridal car',                               // 3
+  'VipShuttle24 – Corporate Roadshow NRW, business limousine',                           // 4
+  'VipShuttle24 – Mercedes S-Class, luxury sedan Düsseldorf',                            // 5
+  'VipShuttle24 – Mercedes E-Class, business sedan NRW',                                 // 7
+  'VipShuttle24 – Mercedes V-Class VIP van, group vehicle',                              // 8
+  'VipShuttle24 – Chauffeur Service Düsseldorf, elegant transfer',                       // 9
+  'VipShuttle24 – Hourly booking, limousine with driver',                                // 10
+  'VipShuttle24 – VIP Service NRW, luxury vehicle exterior',                             // 12
+  'VipShuttle24 – Premium chauffeur, maintained Mercedes interior',                      // 13
+  'VipShuttle24 – Airport transfer Cologne, professional driver',                        // 14
+  'VipShuttle24 – Luxury limousine service, black Mercedes',                             // 17
+  'VipShuttle24 – Night ride Düsseldorf, stylish city transfer',                         // 18
+  'VipShuttle24 – Premium transfer NRW, chauffeur with passenger',                       // 19
+  'VipShuttle24 – Mercedes S-Class exterior, premium sedan Düsseldorf',                  // 20
+  'VipShuttle24 – VIP chauffeur service, exclusive passenger cabin',                     // 21
+  'VipShuttle24 – Business transfer NRW, professional driving service',                  // 22
+  'VipShuttle24 – Airport transfer Düsseldorf, punctual pick-up service',                // 23
+  'VipShuttle24 – Luxury vehicle detail view, premium interior',                         // 24
+  'VipShuttle24 – Mercedes V-Class interior, VIP group vehicle NRW',                     // 25
+  'VipShuttle24 – Wedding ride Düsseldorf, elegant bridal car journey',                  // 26
+  'VipShuttle24 – Premium driving service, black Mercedes exterior',                     // 28
+  'VipShuttle24 – Chauffeur Düsseldorf, stylish evening transfer',                       // 29
+  'VipShuttle24 – Trade fair Düsseldorf transfer, professional shuttle',                 // 33
+  'VipShuttle24 – Airport meet and greet, VIP reception service',                        // 34
+  'VipShuttle24 – Corporate roadshow limousine, business travel service',                // 37
+  'VipShuttle24 – Luxury interior detail, first-class fittings',                         // 38
+  'VipShuttle24 – Premium Chauffeur Service Düsseldorf, new gallery photo',              // 41
+  'VipShuttle24 – Premium Chauffeur Service NRW, new gallery photo',                     // 43
+  'VipShuttle24 – Mercedes S-Class Medienhafen Düsseldorf, premium chauffeur',           // 44
+  'VipShuttle24 – Luxury vehicle Düsseldorf, exclusive chauffeur service',               // 45
+  'VipShuttle24 – VIP chauffeur NRW, black Mercedes exterior',                           // 47
+  'VipShuttle24 – Exclusive driving service NRW, premium Mercedes',                      // 49
+  'VipShuttle24 – Chauffeur service NRW, stylish luxury transfer',                       // 50
+  'VipShuttle24 – Premium vehicle Düsseldorf, VIP limousine service',                    // 51
+  'VipShuttle24 – Luxury chauffeur Düsseldorf, first-class transfer',                    // 52
+  'VipShuttle24 – VIP transfer NRW, exclusive Mercedes service',                         // 53
+  'VipShuttle24 – Premium limousine service Düsseldorf, elegant driving',                // 55
+  'VipShuttle24 – Exclusive chauffeur NRW, premium transfer service',                    // 56
 ];
 
 type MediaItem =
   | { type: 'image'; src: string; alt: string }
   | { type: 'video'; src: string; alt: string };
 
+// ── Exact files that exist in /public ────────────────────────────────────────
 const IMAGE_FILES: string[] = [
-  // 1–19
-  ...Array.from({ length: 19 }, (_, i) => `${i + 1}.webp`),
-  // 20
+  '1.webp',
+  '2.webp',
+  '3.webp',
+  '4.webp',
+  '5.webp',
+  '7.webp',
+  '8.webp',
+  '9.webp',
+  '10.webp',
+  '12.webp',
+  '13.webp',
+  '14.webp',
+  '17.webp',
+  '18.webp',
+  '19.webp',
   '20.jpeg',
-  // 21–26
-  ...Array.from({ length: 6 }, (_, i) => `${21 + i}.jpg`),
-  // 28–29 (27 removed)
+  '21.jpg',
+  '22.jpg',
+  '23.jpg',
+  '24.jpg',
+  '25.jpg',
+  '26.jpg',
   '28.jpg',
   '29.jpg',
-  // 32–41 (30/31 removed)
-  ...Array.from({ length: 10 }, (_, i) => `${32 + i}.JPG`),
-  // 42–45
-  '42.jpg',
+  '33.JPG',
+  '34.JPG',
+  '37.JPG',
+  '38.JPG',
+  '41.JPG',
   '43.jpg',
   '44.jpg',
   '45.jpg',
-  // 46–57 (NEW)
-  ...Array.from({ length: 12 }, (_, i) => `${46 + i}.jpg`),
+  '47.jpg',
+  '49.jpg',
+  '50.jpg',
+  '51.jpg',
+  '52.jpg',
+  '53.jpg',
+  '55.jpg',
+  '56.jpg',
 ];
 
 const buildMedia = (alts: string[], lang: 'de' | 'en'): MediaItem[] => {
