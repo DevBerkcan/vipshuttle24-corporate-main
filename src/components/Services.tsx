@@ -12,7 +12,7 @@ const IMAGES = [
   { src: '/38.JPG',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom' },
   { src: '/45.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
   { src: '/8.webp',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
-  { src: '/33.jpg',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
+  { src: '/33.JPG',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
 ];
 
 const Services = () => {
