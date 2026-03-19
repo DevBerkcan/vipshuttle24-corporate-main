@@ -45,20 +45,12 @@ export const translations = {
       bottomText: 'Benötigen Sie einen individuellen Service?',
       bottomCta: 'Persönliche Beratung anfragen',
       items: [
-        // ── NEW: Mercedes-Benz Sprinter ──
         {
-          title: 'Mercedes-Benz Sprinter',
-          subtitle: 'Komfort & Raum für Gruppen',
+          title: 'VIP & Chauffeur Service',
+          subtitle: 'Diskretion auf höchstem Niveau',
           description:
-            'Reisen Sie komfortabel mit unserem modernen Mercedes-Benz Sprinter – ideal für Gruppenreisen, Flughafentransfers und Firmenevents. Großzügiger Innenraum, klimatisiert und professionell gefahren.',
-          features: [
-            'Bis zu 8 Personen',
-            'Großes Gepäckvolumen',
-            'Klimaanlage & WLAN',
-            'Professioneller Chauffeur',
-            'Flughafentransfer',
-            'Firmen- & Gruppenreisen',
-          ],
+            'Regelmäßige Betreuung von Geschäftsleuten, Delegationen und VIP-Gästen. Mehrsprachige, ortskundige Fahrer sorgen für 24/7 erstklassigen Service – diskret, zuverlässig und professionell.',
+          features: ['VIP-Gästebetreuung', 'Mehrsprachige Fahrer', 'Diskrete Begleitung', '24/7 Premium Service'],
         },
         {
           title: 'Airport Transfer',
@@ -74,13 +66,7 @@ export const translations = {
             'Professionelle Organisation Ihrer Geschäftsreisen, Roadshows und Messe-Transfers in ganz NRW. Ortskundige Fahrer, VIP-Gästebetreuung und Koordination für Galas, Konzerte und Sportevents.',
           features: ['Geschäftsfahrten & Roadshows', 'Messe- & Eventshuttle', 'VIP- und Gästebetreuung', 'Galas, Konzerte, Sportevents'],
         },
-        {
-          title: 'VIP & Chauffeur Service',
-          subtitle: 'Diskretion auf höchstem Niveau',
-          description:
-            'Regelmäßige Betreuung von Geschäftsleuten, Delegationen und VIP-Gästen. Mehrsprachige, ortskundige Fahrer sorgen für 24/7 erstklassigen Service – diskret, zuverlässig und professionell.',
-          features: ['VIP-Gästebetreuung', 'Mehrsprachige Fahrer', 'Diskrete Begleitung', '24/7 Premium Service'],
-        },
+
         {
           title: 'Gruppen & Bus Transfer',
           subtitle: 'Für große Gruppen und Events',
@@ -427,20 +413,12 @@ export const translations = {
       bottomText: 'Need a custom service?',
       bottomCta: 'Request personal consultation',
       items: [
-        // ── NEW: Mercedes-Benz Sprinter ──
         {
-          title: 'Mercedes-Benz Sprinter',
-          subtitle: 'Comfort & space for groups',
+          title: 'VIP & Chauffeur Service',
+          subtitle: 'Discretion at the highest level',
           description:
-            'Travel in comfort with our modern Mercedes-Benz Sprinter – ideal for group trips, airport transfers and corporate events. Spacious interior, air-conditioned and professionally driven.',
-          features: [
-            'Up to 8 passengers',
-            'Large luggage capacity',
-            'Air conditioning & Wi-Fi',
-            'Professional chauffeur',
-            'Airport transfers',
-            'Corporate & group travel',
-          ],
+            'Regular care for executives, delegations and VIP guests. Multilingual, locally experienced drivers provide 24/7 first-class service – discreet, reliable and professional.',
+          features: ['VIP guest care', 'Multilingual drivers', 'Discreet accompaniment', '24/7 Premium Service'],
         },
         {
           title: 'Airport Transfer',
@@ -456,13 +434,7 @@ export const translations = {
             'Professional organisation of your business trips, roadshows and trade fair transfers throughout NRW. Multilingual drivers, VIP guest care and coordination for galas, concerts and sports events.',
           features: ['Business trips & roadshows', 'Trade fair & event shuttle', 'VIP guest management', 'Galas, concerts, sports events'],
         },
-        {
-          title: 'VIP & Chauffeur Service',
-          subtitle: 'Discretion at the highest level',
-          description:
-            'Regular care for executives, delegations and VIP guests. Multilingual, locally experienced drivers provide 24/7 first-class service – discreet, reliable and professional.',
-          features: ['VIP guest care', 'Multilingual drivers', 'Discreet accompaniment', '24/7 Premium Service'],
-        },
+
         {
           title: 'Group & Bus Transfer',
           subtitle: 'For large groups and events',

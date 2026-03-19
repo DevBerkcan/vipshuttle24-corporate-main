@@ -7,13 +7,12 @@ import { useLang } from '@/i18n/LangContext';
 const ICONS = [FaShuttleVan, FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaGlassCheers];
 
 const IMAGES = [
-  { src: '/44.jpg',  alt: 'VipShuttle24 Mercedes-Benz Sprinter – Gruppenreisen & Transfers NRW', position: 'center 65%' },
-  { src: '/48.jpg',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen', position: 'center 65%' },
+  { src: '/44.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse', position: 'center 65%' },
+  { src: '/22.jpg',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen', position: 'center 55%' },
   { src: '/38.JPG',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom' },
-  { src: '/22.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
-  { src: '/45.jpg',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
-  { src: '/8.webp',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
-  { src: '/33.JPG',  alt: 'VipShuttle24 Private Events – Veranstaltungen NRW', position: 'bottom' },
+  { src: '/45.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
+  { src: '/8.webp',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
+  { src: '/33.jpg',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
 ];
 
 const Services = () => {
