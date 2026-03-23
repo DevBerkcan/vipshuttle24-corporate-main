@@ -68,13 +68,6 @@ export const translations = {
         },
 
         {
-          title: 'Gruppen & Bus Transfer',
-          subtitle: 'Für große Gruppen und Events',
-          description:
-            'Komfortabler Gruppentransfer mit Mercedes-Benz Sprinter oder Tourismo-Reisebus für bis zu 50 Personen. Ideal für Firmenevents, Messefahrten und Gruppenreisen in ganz NRW.',
-          features: ['Bis zu 50 Personen', 'Mercedes Sprinter & Tourismo', 'Mehrtägige Touren möglich', 'Messe- & Eventshuttle'],
-        },
-        {
           title: 'Private Anlässe',
           subtitle: 'Jubiläen, Geburtstage & mehr',
           description:
@@ -87,6 +80,13 @@ export const translations = {
           description:
             'Zuverlässige Transfers zwischen Hotel, Messe und Flughafen. Ob Expo Real, Bauma oder IAA – wir bringen Sie pünktlich, sicher und komfortabel ans Ziel und wieder zurück.',
           features: ['Hoteltransfer', 'Messefahrten', 'Door-to-Door-Service', 'Gepäckassistenz'],
+        },
+                {
+          title: 'Gruppen & Bus Transfer',
+          subtitle: 'Für große Gruppen und Events',
+          description:
+            'Komfortabler Gruppentransfer mit Mercedes-Benz Sprinter oder Tourismo-Reisebus für bis zu 50 Personen. Ideal für Firmenevents, Messefahrten und Gruppenreisen in ganz NRW.',
+          features: ['Bis zu 50 Personen', 'Mercedes Sprinter & Tourismo', 'Mehrtägige Touren möglich', 'Messe- & Eventshuttle'],
         },
       ],
     },
@@ -434,14 +434,6 @@ export const translations = {
             'Professional organisation of your business trips, roadshows and trade fair transfers throughout NRW. Multilingual drivers, VIP guest care and coordination for galas, concerts and sports events.',
           features: ['Business trips & roadshows', 'Trade fair & event shuttle', 'VIP guest management', 'Galas, concerts, sports events'],
         },
-
-        {
-          title: 'Group & Bus Transfer',
-          subtitle: 'For large groups and events',
-          description:
-            'Comfortable group transfers with Mercedes-Benz Sprinter or Tourismo coach for up to 50 passengers. Ideal for corporate events, trade fair shuttles and group travel throughout NRW.',
-          features: ['Up to 50 passengers', 'Mercedes Sprinter & Tourismo', 'Multi-day tours available', 'Trade fair & event shuttle'],
-        },
         {
           title: 'Private Occasions',
           subtitle: 'Anniversaries, birthdays & more',
@@ -455,6 +447,13 @@ export const translations = {
           description:
             'Reliable transfers between hotel, trade fair and airport. Whether Expo Real, Bauma or IAA – we get you there punctually, safely and comfortably and back again.',
           features: ['Hotel transfer', 'Trade fair rides', 'Door-to-door service', 'Luggage assistance'],
+        },
+                {
+          title: 'Group & Bus Transfer',
+          subtitle: 'For large groups and events',
+          description:
+            'Comfortable group transfers with Mercedes-Benz Sprinter or Tourismo coach for up to 50 passengers. Ideal for corporate events, trade fair shuttles and group travel throughout NRW.',
+          features: ['Up to 50 passengers', 'Mercedes Sprinter & Tourismo', 'Multi-day tours available', 'Trade fair & event shuttle'],
         },
       ],
     },
