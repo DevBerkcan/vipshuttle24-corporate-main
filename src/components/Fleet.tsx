@@ -34,6 +34,7 @@ const VEHICLE_IMAGES = [
   },
   {
     image: '/44.jpg',
+    lightboxPosition: '20% 60%',
     altDe: 'Mercedes-Benz Sprinter - VipShuttle24 Gruppenreisen & Events',
     altEn: 'Mercedes-Benz Sprinter - VipShuttle24 Group Travel & Events',
   },
@@ -52,6 +53,7 @@ const Fleet = () => {
         ...v,
         image: img.image,
         position: img.position,
+        lightboxPosition: img.lightboxPosition,
         alt: lang === 'de' ? img.altDe : img.altEn,
       };
     });
@@ -166,7 +168,7 @@ const Fleet = () => {
                 src={vehicles[selectedImage].image}
                 alt={vehicles[selectedImage].alt}
                 fill
-                style={{ objectPosition: vehicles[selectedImage].position }}
+                style={{ objectPosition: vehicles[selectedImage].lightboxPosition ?? vehicles[selectedImage].position }}
                 className="object-cover"
                 sizes="(max-width: 1280px) 95vw, 1280px"
               />
