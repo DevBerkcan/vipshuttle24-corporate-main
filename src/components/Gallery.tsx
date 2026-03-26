@@ -47,6 +47,7 @@ const IMAGE_FILES: string[] = [
   '44.jpg',
   '45.jpg',
   '47.jpg',
+  '51.jpg',
   '55.jpg',
   '56.jpg',
 ];
