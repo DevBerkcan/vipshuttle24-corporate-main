@@ -1,5 +1,3 @@
-'use client';
-
 export type Lang = 'de' | 'en';
 
 export const translations = {
