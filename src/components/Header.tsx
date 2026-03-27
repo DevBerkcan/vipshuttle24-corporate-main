@@ -32,11 +32,11 @@ const Header = () => {
       role="banner"
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-24 lg:h-28">
+        <div className="flex items-center h-24 lg:h-32">
 
           {/* Logo */}
-          <a href="/" className="relative group" aria-label={t.header.home}>
-            <div className="relative w-52 lg:w-72 h-16 lg:h-20">
+          <a href="/" className="relative group flex-1" aria-label={t.header.home}>
+            <div className="relative w-52 lg:w-80 h-16 lg:h-24">
               <Image
                 src="/logo5.png"
                 alt="VIPSHUTTLE 24 Logo"
@@ -50,7 +50,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10" aria-label="Hauptnavigation">
+          <nav className="hidden lg:flex items-center justify-center space-x-10 flex-1" aria-label="Hauptnavigation">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -64,7 +64,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop: phone + lang switcher */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center justify-end space-x-4 flex-1">
             <a
               href="tel:+491772472408"
               className="flex items-center space-x-2 text-silver hover:text-silver-light transition-all duration-300 hover:shadow-glow rounded-lg px-4 py-2"
