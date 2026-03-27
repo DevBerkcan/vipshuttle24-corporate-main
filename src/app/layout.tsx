@@ -101,8 +101,8 @@ const localBusinessJsonLd = {
     "https://www.instagram.com/vipshuttle24.de/",
   ],
   priceRange: "€€€",
-  image: "https://vipshuttle-24.de/og-image.webp",
-  logo: "https://vipshuttle-24.de/og-image.webp",
+  image: "https://vipshuttle-24.de/1.webp",
+  logo: "https://vipshuttle-24.de/logo2.webp",
   areaServed: [
     { "@type": "State", name: "Nordrhein-Westfalen" },
     { "@type": "City", name: "Düsseldorf" },
@@ -251,7 +251,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Preload hero poster (LCP image) */}
-        <link rel="preload" as="image" href="/11.webp" />
+        <link rel="preload" as="image" href="/12.webp" />
 
         {/* Fonts */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
