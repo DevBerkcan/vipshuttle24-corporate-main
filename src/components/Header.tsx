@@ -32,16 +32,16 @@ const Header = () => {
       role="banner"
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+        <div className="flex items-center justify-between h-24 lg:h-28">
 
           {/* Logo */}
           <a href="/" className="relative group" aria-label={t.header.home}>
-            <div className="relative w-40 lg:w-52 h-12 lg:h-14">
+            <div className="relative w-52 lg:w-72 h-16 lg:h-20">
               <Image
-                src="/logo2.png"
+                src="/logo5.png"
                 alt="VIPSHUTTLE 24 Logo"
                 fill
-                sizes="(max-width: 1024px) 160px, 208px"
+                sizes="(max-width: 1024px) 208px, 288px"
                 className="object-contain object-left"
                 priority
               />
