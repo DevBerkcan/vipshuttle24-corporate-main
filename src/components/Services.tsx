@@ -7,12 +7,12 @@ import { useLang } from '@/i18n/LangContext';
 const ICONS = [FaShuttleVan, FaPlane, FaBriefcase, FaCar, FaBus, FaStar, FaGlassCheers];
 
 const IMAGES = [
-  { src: '/44.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse', position: 'center 65%' },
-  { src: '/22.jpg',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen', position: 'center 55%' },
-  { src: '/24.jpg',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom' },
-  { src: '/8.webp',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse' },
-  { src: '/33.JPG',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW' },
-  { src: '/45.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse' },
+  { src: '/44.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse', position: 'center 65%', mobilePosition: 'center 60%' },
+  { src: '/22.jpg',  alt: 'VipShuttle24 Airport Transfer Düsseldorf – Mercedes Chauffeur am Flughafen', position: 'center 55%', mobilePosition: 'center 50%' },
+  { src: '/24.jpg',  alt: 'VipShuttle24 Corporate Roadshow NRW – Business Chauffeur Service', position: 'bottom', mobilePosition: 'center' },
+  { src: '/8.webp',  alt: 'VipShuttle24 Gruppenbus & Sprinter Düsseldorf – Mercedes Sprinter und V-Klasse', position: 'center', mobilePosition: 'center' },
+  { src: '/33.JPG',  alt: 'VipShuttle24 VIP Service – Premium Chauffeur NRW', position: 'center', mobilePosition: 'center' },
+  { src: '/45.jpg',  alt: 'VipShuttle24 VIP Chauffeur Service – Mercedes S-Klasse', position: 'center', mobilePosition: 'center' },
 ];
 
 const Services = () => {
@@ -54,8 +54,9 @@ const Services = () => {
               >
                 <div className={`flex flex-col lg:grid lg:grid-cols-2 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
 
+                  {/* ── IMAGE ── */}
                   <div
-                    className={`relative h-52 sm:h-64 lg:h-auto lg:min-h-[380px] overflow-hidden ${
+                    className={`relative h-64 sm:h-80 lg:h-auto lg:min-h-[380px] overflow-hidden ${
                       index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'
                     }`}
                   >
@@ -71,6 +72,7 @@ const Services = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/20 to-transparent" />
                   </div>
 
+                  {/* ── CONTENT ── */}
                   <div
                     className={`flex flex-col justify-center p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-5 ${
                       index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'
@@ -106,6 +108,7 @@ const Services = () => {
                       <FaArrowRight className="text-sm group-hover/link:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                     </a>
                   </div>
+
                 </div>
               </article>
             );
