@@ -52,6 +52,45 @@ const IMAGE_FILES: string[] = [
   '56.jpg',
 ];
 
+const IMAGE_ALT_TEXTS: string[] = [
+  'VIPSHUTTLE24 Mercedes-Benz S-Class luxury chauffeur service Düsseldorf Germany',
+  'VIP chauffeur Mercedes interior – premium leather seating Germany',
+  'VIPSHUTTLE24 luxury sedan parked – private chauffeur service Germany',
+  'Mercedes-Benz E-Class business sedan – executive chauffeur Germany',
+  'VIP airport transfer Düsseldorf – VIPSHUTTLE24 meet and greet service',
+  'VIPSHUTTLE24 Mercedes fleet – VIP transportation service Germany',
+  'Mercedes Sprinter VIP van – group transfer Germany VIPSHUTTLE24',
+  'Luxury chauffeur night transfer Germany – VIPSHUTTLE24 Mercedes',
+  'VIPSHUTTLE24 Mercedes S-Class at night – premium chauffeur Düsseldorf',
+  'VIP chauffeur service hero image – VIPSHUTTLE24 Germany Mercedes',
+  'Corporate roadshow chauffeur Germany – VIPSHUTTLE24 business travel',
+  'Mercedes E-Class business transfer Germany – VIPSHUTTLE24',
+  'VIPSHUTTLE24 VIP client arrival – celebrity chauffeur Germany',
+  'Mercedes V-Class airport fleet – VIPSHUTTLE24 group transfer Germany',
+  'Luxury Mercedes interior detail – VIPSHUTTLE24 premium chauffeur service',
+  'VIPSHUTTLE24 Mercedes Tourismo coach – group hire Germany',
+  'VIP chauffeur event service Germany – VIPSHUTTLE24 gala transport',
+  'Mercedes airport transfer Germany – VIPSHUTTLE24 professional driver',
+  'Private chauffeur Düsseldorf – VIPSHUTTLE24 luxury car service',
+  'VIPSHUTTLE24 corporate transfer Germany – Mercedes executive sedan',
+  'VIP car service Germany – VIPSHUTTLE24 Mercedes-Benz fleet',
+  'Chauffeur service NRW – VIPSHUTTLE24 premium Mercedes transfer',
+  'VIPSHUTTLE24 luxury sedan exterior – VIP transportation Germany',
+  'Mercedes-Benz Sprinter VIP van – VIPSHUTTLE24 group travel Germany',
+  'VIPSHUTTLE24 black Mercedes fleet – celebrity chauffeur Germany',
+  'VIP chauffeur service Düsseldorf – VIPSHUTTLE24 Mercedes S-Class exterior',
+  'VIPSHUTTLE24 Mercedes airport pickup – professional driver Germany',
+  'Luxury car service Germany – VIPSHUTTLE24 chauffeur with client',
+  'VIPSHUTTLE24 VIP event chauffeur – premium Mercedes Germany',
+  'Private hire Germany – VIPSHUTTLE24 Mercedes-Benz luxury sedan',
+  'VIPSHUTTLE24 VIP chauffeur service Düsseldorf – S-Class at hotel',
+  'Mercedes-Benz fleet at event venue – VIPSHUTTLE24 Germany',
+  'VIP transfer service Germany – VIPSHUTTLE24 airport chauffeur',
+  'VIPSHUTTLE24 Mercedes group transport – corporate event Germany',
+  'Luxury Mercedes-Benz coach Germany – VIPSHUTTLE24 Tourismo group hire',
+  'VIPSHUTTLE24 premium chauffeur Germany – black Mercedes fleet lineup',
+];
+
 const media: MediaItem[] = IMAGE_FILES.map((file) => ({
   type: 'image',
   src: `/${file}`,
@@ -132,7 +171,7 @@ const Gallery = () => {
               >
                 <Image
                   src={item.src}
-                  alt={`VipShuttle24 – Gallery image ${index + 1}`}
+                  alt={IMAGE_ALT_TEXTS[index] ?? `VIPSHUTTLE24 VIP chauffeur service Germany – image ${index + 1}`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -232,7 +271,7 @@ const Gallery = () => {
             >
               <Image
                 src={selectedItem.src}
-                alt={`VipShuttle24 – Gallery image ${selectedIndex + 1}`}
+                alt={IMAGE_ALT_TEXTS[selectedIndex] ?? `VIPSHUTTLE24 VIP chauffeur service Germany – image ${selectedIndex + 1}`}
                 fill
                 className="object-contain rounded-lg"
                 sizes="(max-width: 1280px) 95vw, 1280px"

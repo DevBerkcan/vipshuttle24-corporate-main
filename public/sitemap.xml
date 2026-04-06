@@ -6,23 +6,35 @@
     <lastmod>2025-01-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vipshuttle-24.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vipshuttle-24.de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vipshuttle-24.de/"/>
   </url>
   <url>
     <loc>https://vipshuttle-24.de/impressum</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vipshuttle-24.de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vipshuttle-24.de/impressum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vipshuttle-24.de/impressum"/>
   </url>
   <url>
     <loc>https://vipshuttle-24.de/datenschutz</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vipshuttle-24.de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vipshuttle-24.de/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vipshuttle-24.de/datenschutz"/>
   </url>
   <url>
     <loc>https://vipshuttle-24.de/agb</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vipshuttle-24.de/agb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vipshuttle-24.de/agb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vipshuttle-24.de/agb"/>
   </url>
 </urlset>
