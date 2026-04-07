@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { translations } from '@/i18n/translations';
 import { getPath } from '@/i18n/config';
 import { getLegalMetadata } from '@/i18n/seo';
+import { translations } from '@/i18n/translations';
 
-export const metadata: Metadata = getLegalMetadata('impressum', 'de');
+export const metadata: Metadata = getLegalMetadata('impressum', 'en');
 
-export default function Impressum() {
-  const lang = 'de';
+export default function EnglishLegalNoticePage() {
+  const lang = 'en';
   const l = translations[lang].legal;
   const i = l.impressum;
   const lk = l.links;
@@ -55,8 +55,7 @@ export default function Impressum() {
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{i.s4Title}</h2>
             <p className="text-silver/70 leading-relaxed text-sm">
               {i.s4Text}{' '}
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer"
-                className="text-platinum hover:text-silver transition-colors">
+              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-platinum hover:text-silver transition-colors">
                 https://ec.europa.eu/consumers/odr/
               </a>
               . {i.s4Suffix}

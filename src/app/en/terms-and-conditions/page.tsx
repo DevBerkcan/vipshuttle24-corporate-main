@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { translations } from '@/i18n/translations';
 import { getPath } from '@/i18n/config';
 import { getLegalMetadata } from '@/i18n/seo';
+import { translations } from '@/i18n/translations';
 
-export const metadata: Metadata = getLegalMetadata('agb', 'de');
+export const metadata: Metadata = getLegalMetadata('agb', 'en');
 
-export default function AGB() {
-  const lang = 'de';
+export default function EnglishTermsPage() {
+  const lang = 'en';
   const l = translations[lang].legal;
   const a = l.agb;
   const lk = l.links;
@@ -42,7 +42,6 @@ export default function AGB() {
               </div>
             ))}
 
-            {/* Cancellation table */}
             <div className="glass-card p-5">
               <h2 className="text-silver font-semibold mb-2">{a.storno.title}</h2>
               <div className="text-silver/70 text-sm leading-relaxed space-y-2">

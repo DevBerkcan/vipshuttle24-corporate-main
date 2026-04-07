@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { translations } from '@/i18n/translations';
 import { getPath } from '@/i18n/config';
 import { getLegalMetadata } from '@/i18n/seo';
+import { translations } from '@/i18n/translations';
 
-export const metadata: Metadata = getLegalMetadata('datenschutz', 'de');
+export const metadata: Metadata = getLegalMetadata('datenschutz', 'en');
 
-export default function Datenschutz() {
-  const lang = 'de';
+export default function EnglishPrivacyPolicyPage() {
+  const lang = 'en';
   const l = translations[lang].legal;
   const d = l.datenschutz;
   const lk = l.links;
@@ -28,7 +28,6 @@ export default function Datenschutz() {
             <h1 className="text-3xl md:text-4xl font-display font-bold text-gradient mb-2">{d.h1}</h1>
           </div>
 
-          {/* 1 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s1Title}</h2>
             <h3 className="text-silver/90 font-semibold mb-2">{d.s1h2}</h3>
@@ -39,7 +38,6 @@ export default function Datenschutz() {
             <p className="text-silver/70 leading-relaxed text-sm">{d.s1p3}</p>
           </section>
 
-          {/* 2 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s2Title}</h2>
             <h3 className="text-silver/90 font-semibold mb-2">{d.s2h2}</h3>
@@ -48,7 +46,6 @@ export default function Datenschutz() {
             <p className="text-silver/70 leading-relaxed text-sm">{d.s2p2}</p>
           </section>
 
-          {/* 3 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s3Title}</h2>
             <address className="not-italic text-silver/70 leading-relaxed text-sm">
@@ -62,7 +59,6 @@ export default function Datenschutz() {
             </address>
           </section>
 
-          {/* 4 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s4Title}</h2>
             <h3 className="text-silver/90 font-semibold mb-2">{d.s4h2}</h3>
@@ -73,20 +69,17 @@ export default function Datenschutz() {
             <p className="text-silver/70 leading-relaxed text-sm">{d.s4p3}</p>
           </section>
 
-          {/* 5 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s5Title}</h2>
             <p className="text-silver/70 leading-relaxed text-sm">{d.s5p1}</p>
           </section>
 
-          {/* 6 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s6Title}</h2>
             <h3 className="text-silver/90 font-semibold mb-2">{d.s6h2}</h3>
             <p className="text-silver/70 leading-relaxed text-sm">{d.s6p1}</p>
           </section>
 
-          {/* 7 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s7Title}</h2>
             <h3 className="text-silver/90 font-semibold mb-2">{d.s7h2}</h3>
@@ -97,7 +90,6 @@ export default function Datenschutz() {
             <p className="text-silver/70 leading-relaxed text-sm">{d.s7p3}</p>
           </section>
 
-          {/* 8 */}
           <section>
             <h2 className="text-xl font-display font-semibold text-silver mb-4">{d.s8Title}</h2>
             <p className="text-silver/70 leading-relaxed text-sm">{d.s8p1}</p>

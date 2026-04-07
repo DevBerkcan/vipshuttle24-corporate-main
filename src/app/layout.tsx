@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from 'next/headers';
 import "./globals.css";
 import { LangProvider } from "@/i18n/LangContext";
 
@@ -13,13 +14,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://vipshuttle-24.de"),
   title: {
-    default: "VIPSHUTTLE24 | VIP Chauffeur Service Germany – Düsseldorf | Premium Limousinenservice",
+    default: "VIPSHUTTLE24",
     template: "%s | VIPSHUTTLE24",
   },
   description:
-    "VIP chauffeur service in Germany for celebrities, executives & international clients. English-speaking drivers, Mercedes fleet, 24/7. Airport transfers, corporate travel & private hire across Germany and Europe. Based in Düsseldorf.",
-  keywords:
-    "VIP chauffeur service Germany, luxury car service Germany, celebrity driver Germany, private chauffeur Düsseldorf, VIP transportation Germany, Mercedes chauffeur Germany, airport transfer Germany VIP, private driver Germany English speaking, VIP shuttle Germany, Chauffeur Service Düsseldorf, Limousinenservice NRW, Flughafentransfer Düsseldorf, Premium Transfer NRW, Corporate Roadshow NRW, VIP Service Düsseldorf, vipshuttle24",
+    "VIPSHUTTLE24 offers premium chauffeur, airport transfer and VIP transportation services from Düsseldorf across Germany and Europe.",
   authors: [{ name: "VIPSHUTTLE24", url: "https://vipshuttle-24.de" }],
   creator: "VIPSHUTTLE24",
   publisher: "VIPSHUTTLE24",
@@ -34,38 +33,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  openGraph: {
-    type: "website",
-    locale: "de_DE",
-    alternateLocale: ["en_US", "en_GB"],
-    url: "https://vipshuttle-24.de",
-    siteName: "VIPSHUTTLE24",
-    title: "VIPSHUTTLE24 | VIP Chauffeur Service Germany – English Speaking Drivers",
-    description:
-      "Professional VIP chauffeur and luxury car service in Germany. English-speaking, discreet drivers for celebrities, executives & VIP clients. Mercedes S-Class, E-Class & Sprinter fleet. Airport transfers, corporate travel, private hire. 24/7 – Düsseldorf & all of Germany.",
-    images: [
-      {
-        url: "/og-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "VIPSHUTTLE24 – VIP Chauffeur Service Germany, Luxury Mercedes Fleet Düsseldorf",
-      },
-    ],
-  },
   twitter: {
     card: "summary_large_image",
-    title: "VIPSHUTTLE24 | VIP Chauffeur Service Germany – 24/7 English Speaking",
-    description:
-      "Luxury Mercedes chauffeur service in Germany. English-speaking, discreet drivers for celebrities, executives & VIP clients. Airport transfers & private hire across Germany.",
     images: ["/og-image.webp"],
-  },
-  alternates: {
-    canonical: "https://vipshuttle-24.de",
-    languages: {
-      de: "https://vipshuttle-24.de",
-      en: "https://vipshuttle-24.de",
-      "x-default": "https://vipshuttle-24.de",
-    },
   },
   category: "transportation",
 };
@@ -372,8 +342,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = headers().get('x-vip-locale') === 'en' ? 'en' : 'de';
+
   return (
-    <html lang="de">
+    <html lang={locale}>
       <head>
         {/* Structured Data */}
         <script
@@ -421,7 +393,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body><LangProvider>{children}</LangProvider></body>
+      <body><LangProvider initialLang={locale}>{children}</LangProvider></body>
     </html>
   );
 }

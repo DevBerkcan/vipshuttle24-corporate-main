@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { FaPhone, FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { useLang } from '@/i18n/LangContext';
 import LangSwitcher from './LangSwitcher';
+import { getPath } from '@/i18n/config';
 
 const Header = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -35,7 +37,7 @@ const Header = () => {
         <div className="flex items-center h-24 lg:h-32">
 
           {/* Logo */}
-          <a href="/" className="relative group flex-1" aria-label={t.header.home}>
+          <Link href={getPath(lang, 'home')} className="relative group flex-1" aria-label={t.header.home}>
             <div className="relative w-52 lg:w-80 h-16 lg:h-24">
               <Image
                 src="/logo5.png"
@@ -47,7 +49,7 @@ const Header = () => {
               />
             </div>
             <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-silver to-transparent transition-all duration-500" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center justify-center space-x-10 flex-1" aria-label="Hauptnavigation">

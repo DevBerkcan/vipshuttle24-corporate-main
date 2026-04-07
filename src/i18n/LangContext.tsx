@@ -11,21 +11,24 @@ interface LangContextValue {
 
 const LangContext = createContext<LangContextValue | null>(null);
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('de');
+export function LangProvider({
+  children,
+  initialLang = 'de',
+}: {
+  children: ReactNode;
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
-  // Persist choice in localStorage
   useEffect(() => {
-    const stored = localStorage.getItem('vip_lang') as Lang | null;
-    if (stored === 'de' || stored === 'en') setLangState(stored);
-  }, []);
+    setLangState(initialLang);
+  }, [initialLang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);
     localStorage.setItem('vip_lang', l);
   };
 
-  // ✅ Type-safe fix: cast translations[lang]
   const t = translations[lang] as Translations;
 
   return (

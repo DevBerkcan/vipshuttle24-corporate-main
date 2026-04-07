@@ -1,7 +1,9 @@
 'use client';
 
+import Link from 'next/link';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { useLang } from '@/i18n/LangContext';
+import { getPath } from '@/i18n/config';
 
 const Footer = () => {
   const { t } = useLang();
@@ -93,9 +95,9 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-silver/50 text-xs sm:text-sm text-center sm:text-left">{f.copyright(currentYear)}</p>
               <nav aria-label="Rechtliches" className="flex space-x-5 text-sm">
-                <a href={`/impressum?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.impressum}</a>
-                <a href={`/datenschutz?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.datenschutz}</a>
-                <a href={`/agb?lang=${lang}`} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.agb}</a>
+                <Link href={getPath(lang, 'impressum')} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.impressum}</Link>
+                <Link href={getPath(lang, 'datenschutz')} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.datenschutz}</Link>
+                <Link href={getPath(lang, 'agb')} className="text-silver/50 hover:text-silver transition-colors duration-300 text-xs sm:text-sm">{f.agb}</Link>
               </nav>
             </div>
           </div>
